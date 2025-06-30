@@ -8,20 +8,26 @@
 
 ## 🎯 Summary
 
-- 🚀 Developed and deployed **Scorva**, a sports analytics platform with **100,000+** stat records and live updates for **3,000+** games.  
-- 🛠️ Internship at NYC DOE: automated deployments across **50+ servers**, cut setup time by **25%**, and achieved a **95%** first-time resolution rate on system issues.  
-- 📱 Currently designing **Sirat**, a mobile-first Islamic utility app with prayer times, Qibla direction, and mosque finder.
-
----
+# 🚀 Developed and deployed Scorva, a full-stack sports tracking app with 100,000+ stat records and real-time updates for 3,000+ NBA, NFL, and NHL games.
+# 🛠️ SWE Intern at Soaper: optimized APIs and frontend logic, cutting user latency by 25% and reducing production bugs by 40%.
+# 🖥️ Infra Intern at NYC DOE: automated deployment across 50+ servers, cut setup time by 25%, and achieved 95% first-time resolution on system issues.
+# 📱 Currently building Sirat, a React Native mobile app with live prayer times, Qibla direction, and mosque discovery features.
 
 ## 💼 Experience
 
-**Infrastructure Automation Intern**  
-NYC Department of Education, Division of IT | May 2025 – Present  
-- Automated PowerShell deployment workflows across **50+** servers and workstations, reducing setup time by **25%**.  
-- Conducted technical audits at **30+** public schools to validate DOE standards.  
-- Diagnosed & resolved **50+** Windows/Linux issues (95% first-time resolution) via custom scripts and log analysis.  
-- Built a macro-enabled Excel asset tracker, cutting inventory delays by **20%**.
+# Software Engineering Intern
+# Soaper | Remote | June 2025 – Present
+# - Built new full-stack features with React, FastAPI, and PostgreSQL to support customer analytics and user workflows.
+# - Optimized API calls and frontend rendering, reducing user-facing latency by 25%.
+# - Deployed cloud solutions on AWS and Azure; improved system reliability and user response time by 25%.
+# - Led bug triage and CI/CD improvements, cutting production bugs by 40% through automated testing and GitHub workflows.
+
+# Infrastructure Automation Intern
+# NYC Department of Education – Division of IT | New York, NY | May 2025 – Present
+# - Automated PowerShell-based deployment workflows for 50+ servers/workstations, reducing setup time by 25%.
+# - Conducted audits at 30+ public schools to enforce DOE infrastructure standards.
+# - Resolved 50+ Windows/Linux issues via scripting and log analysis with a 95% first-time fix rate.
+# - Developed a macro-enabled Excel tool to track IT assets, improving inventory efficiency by 20%.
 
 ---
 
@@ -51,15 +57,6 @@ NYC Department of Education, Division of IT | May 2025 – Present
 
 ---
 
-## 🧰 Tech Stack
-
-- **Languages:** JavaScript • TypeScript • Java • C++ • SQL • HTML/CSS  
-- **Frontend:** React • React Native • Tailwind CSS • Vite • Expo  
-- **Backend:** Node.js • Express • REST APIs • PostgreSQL • MySQL • SQLite • Supabase  
-- **DevOps & Tools:** Git • GitHub Actions • Vercel • Railway • Docker • PowerShell • Bash • Postman
-
----
-
 ## 🎓 Education
 
 **B.S. in Computer Science** (GPA: 3.6/4.0)  
@@ -70,7 +67,7 @@ Relevant Coursework: Data Structures & Algorithms; OOP; Database Systems; AI; Co
 
 ## 📫 Let’s Connect
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yassinbenelhajlahsen)  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yassin-benelhajlahsen)  
 [![GitHub](https://img.shields.io/badge/GitHub-black?style=for-the-badge&logo=github)](https://github.com/yassinbenelhajlahsen)  
 ✉️ yassinbenelhajlahsen@gmail.com
 
