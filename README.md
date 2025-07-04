@@ -24,17 +24,23 @@ Open to SWE internships and new‑grad roles.
 ---
 
 ## 💻 Projects
-<div align="center">
+<!-- Scorva: full-width-style -->
+<p align="center">
   <a href="https://github.com/yassinbenelhajlahsen/Scorva">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=yassinbenelhajlahsen&repo=Scorva&theme=tokyonight&border_radius=12&v=2" style="margin: 0 10px;" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=yassinbenelhajlahsen&repo=Scorva&theme=github_dark&border_radius=12&v=4" width="800" />
   </a>
+</p>
+
+<!-- Sirat and StatTracker: side-by-side, equal width -->
+<p align="center">
   <a href="https://github.com/yassinbenelhajlahsen/Sirat">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=yassinbenelhajlahsen&repo=Sirat&theme=tokyonight&border_radius=12&v=2" style="margin: 0 10px;" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=yassinbenelhajlahsen&repo=Sirat&theme=github_dark&border_radius=12&v=1" width="390" />
   </a>
   <a href="https://github.com/yassinbenelhajlahsen/StatTracker">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=yassinbenelhajlahsen&repo=StatTracker&theme=tokyonight&border_radius=12&v=2" style="margin: 0 10px;" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=yassinbenelhajlahsen&repo=StatTracker&theme=github_dark&border_radius=12&v=4" width="390" />
   </a>
-</div>
+</p>
+
 
 
 
