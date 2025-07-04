@@ -29,7 +29,6 @@ Open to SWE internships and new‑grad roles.
   <a href="https://github.com/yassinbenelhajlahsen/Scorva">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=yassinbenelhajlahsen&repo=Scorva&theme=tokyonight" />
   </a>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://github.com/yassinbenelhajlahsen/Sirat">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=yassinbenelhajlahsen&repo=Sirat&theme=tokyonight" />
   </a>
