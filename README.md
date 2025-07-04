@@ -23,16 +23,18 @@ Open to SWE internships and new‑grad roles.
 
 ---
 
-## 🚀 Projects
-
-<p align="center">
+## 💻 Projects
+<div align="center">
   <a href="https://github.com/yassinbenelhajlahsen/Scorva">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=yassinbenelhajlahsen&repo=Scorva&theme=tokyonight" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=yassinbenelhajlahsen&repo=Scorva&theme=tokyonight&border_radius=12&v=2" style="margin: 0 10px;" />
   </a>
   <a href="https://github.com/yassinbenelhajlahsen/Sirat">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=yassinbenelhajlahsen&repo=Sirat&theme=tokyonight" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=yassinbenelhajlahsen&repo=Sirat&theme=tokyonight&border_radius=12&v=2" style="margin: 0 10px;" />
   </a>
-</p>
+  <a href="https://github.com/yassinbenelhajlahsen/StatTracker">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=yassinbenelhajlahsen&repo=StatTracker&theme=tokyonight&border_radius=12&v=2" style="margin: 0 10px;" />
+  </a>
+</div>
 
 
 
