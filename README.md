@@ -27,17 +27,17 @@ Open to SWE internships and new‑grad roles.
 <!-- Scorva: full-width-style -->
 <p align="center">
   <a href="https://github.com/yassinbenelhajlahsen/Scorva">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=yassinbenelhajlahsen&repo=Scorva&theme=github_dark&border_radius=12&v=4" width="800" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=yassinbenelhajlahsen&repo=Scorva&theme=github_dark&border_radius=12&v=4" width="400" />
   </a>
 </p>
 
 <!-- Sirat and StatTracker: side-by-side, equal width -->
 <p align="center">
   <a href="https://github.com/yassinbenelhajlahsen/Sirat">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=yassinbenelhajlahsen&repo=Sirat&theme=github_dark&border_radius=12&v=1" width="390" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=yassinbenelhajlahsen&repo=Sirat&theme=github_dark&border_radius=12&v=1" width="300" />
   </a>
   <a href="https://github.com/yassinbenelhajlahsen/StatTracker">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=yassinbenelhajlahsen&repo=StatTracker&theme=github_dark&border_radius=12&v=4" width="390" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=yassinbenelhajlahsen&repo=StatTracker&theme=github_dark&border_radius=12&v=4" width="300" />
   </a>
 </p>
 
