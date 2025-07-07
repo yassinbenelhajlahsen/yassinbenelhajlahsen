@@ -34,10 +34,10 @@ Open to SWE internships and new‑grad roles.
 <!-- Sirat and StatTracker: side-by-side, equal width -->
 <p align="center">
   <a href="https://github.com/yassinbenelhajlahsen/Sirat">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=yassinbenelhajlahsen&repo=Sirat&theme=github_dark&border_radius=12&v=1" width="300" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=yassinbenelhajlahsen&repo=Sirat&theme=github_dark&border_radius=12&v=1" width="400" />
   </a>
   <a href="https://github.com/yassinbenelhajlahsen/StatTracker">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=yassinbenelhajlahsen&repo=StatTracker&theme=github_dark&border_radius=12&v=4" width="300" />
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=yassinbenelhajlahsen&repo=StatTracker&theme=github_dark&border_radius=12&v=4" width="400" />
   </a>
 </p>
 
@@ -48,22 +48,23 @@ Open to SWE internships and new‑grad roles.
 
 ## 💼 Experience
 
-<details>
-<summary><strong>Software Engineering Intern @ Soaper (2025 - Present)</strong></summary>
+<details> <summary><strong>Software Engineering Intern @ Soaper (2025 – Present)</strong></summary>
 
-* Built features with React, FastAPI, and PostgreSQL
-* Cut latency 25% after tuning APIs and memoizing renders
-* Added CI with GitHub Actions; reduced production bugs 40%
+* Engineered scalable features with React, FastAPI, and PostgreSQL, reducing frontend latency by 25%
+
+* Tuned API responses and minimized re-renders to improve user experience
+
+* Supported cloud deployments on AWS and Azure to enhance system stability
+
+</details> <details> <summary><strong>Infrastructure Automation Intern @ NYC DOE (2025 – Present)</strong></summary>
+
+* Automated server and image deployment across 50+ NYC school sites using PowerShell
+
+* Resolved 95% of support tickets on first attempt through precise diagnostics and scripting
+
+* Performed in-person audits and configured hardware/software in coordination with borough-wide teams
 
 </details>
-
-<details>
-<summary><strong>Infrastructure Intern @ NYC DOE (2025 - Present)</strong></summary>
-
-* Automated server rollout across 50+ nodes using PowerShell
-* Achieved 95% first‑time resolution for tickets
-* Built Excel macro that lifted inventory efficiency 20%
-
 </details>
 
 ---
