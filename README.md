@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://linkedin.com/in/yassin-benelhajlahsen"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-<a href="https://raw.githubusercontent.com/yassinbenelhajlahsen/yassinbenelhajlahsen/main/Yassin_Benelhajlahsen_SWE_Resume.pdf">
+<a href="https://github.com/yassinbenelhajlahsen/yassinbenelhajlahsen/blob/95deea6a321eee8e455048ebe9b34ce8482d4dbb/Yassin_Benelhajlahsen_SWE_Resume.pdf">
   <img src="https://img.shields.io/badge/Resume-PDF-0077B5?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Download résumé PDF"/>
 </a>
 </p>
