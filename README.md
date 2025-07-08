@@ -13,16 +13,6 @@
 
 ---
 
-## 📜 TL;DR
-
-```text
-CS '26 @ CUNY Brooklyn · GPA 3.6
-Full‑Stack engineer who turns data into fast, reliable products.
-Open to SWE internships and new‑grad roles.
-```
-
----
-
 ## 💻 Projects
 <!-- Scorva: full-width-style -->
 <p align="center">
@@ -41,14 +31,26 @@ Open to SWE internships and new‑grad roles.
   </a>
 </p>
 
+---
 
+## 📜 TL;DR
 
+```text
+CS '26 @ CUNY Brooklyn · GPA 3.6
+Full‑Stack engineer who turns data into fast, reliable products.
+Open to SWE internships and new‑grad roles.
+```
 
 ---
 
 ## 💼 Experience
+</details> <details><summary><strong>Technical Interview Prep Fellow @ Codepath (September 2025 – November 2025)</strong></summary>
 
-<details> <summary><strong>Software Engineering Intern @ Soaper (2025 – Present)</strong></summary>
+* Selected for CodePath’s TIP 102, a competitive 10-week program focused on intermediate technical interview preparation. 
+
+* Curriculum includes data structures, algorithms, dynamic programming, and problem-solving using Python.
+
+</details> <details><summary><strong>Software Engineering Intern @ Soaper (June 2025 – Present)</strong></summary>
 
 * Engineered scalable features with React, FastAPI, and PostgreSQL, reducing frontend latency by 25%
 
@@ -56,7 +58,7 @@ Open to SWE internships and new‑grad roles.
 
 * Supported cloud deployments on AWS and Azure to enhance system stability
 
-</details> <details> <summary><strong>Infrastructure Automation Intern @ NYC DOE (2025 – Present)</strong></summary>
+</details> <details> <summary><strong>Infrastructure Automation Intern @ NYC DOE (May 2025 – Present)</strong></summary>
 
 * Automated server and image deployment across 50+ NYC school sites using PowerShell
 
@@ -64,6 +66,7 @@ Open to SWE internships and new‑grad roles.
 
 * Performed in-person audits and configured hardware/software in coordination with borough-wide teams
 
+</details>
 </details>
 </details>
 
