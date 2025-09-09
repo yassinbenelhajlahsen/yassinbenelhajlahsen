@@ -40,13 +40,7 @@ Open to SWE internships and new‑grad roles.
 ---
 
 ## 💼 Experience
-</details> <details><summary><strong>Technical Interview Prep Fellow @ Codepath (September 2025 – November 2025)</strong></summary>
-
-* Selected for CodePath’s TIP 102, a competitive 10-week program focused on intermediate technical interview preparation. 
-
-* Curriculum includes data structures, algorithms, dynamic programming, and problem-solving using Python.
-
-</details> <details><summary><strong>Software Engineering Intern @ Soaper (June 2025 – Present)</strong></summary>
+</details> <details><summary><strong>Software Engineer Intern @ Soaper (June 2025 – Present)</strong></summary>
 
 * Engineered scalable features with React, FastAPI, and PostgreSQL, reducing frontend latency by 25%
 
@@ -54,15 +48,16 @@ Open to SWE internships and new‑grad roles.
 
 * Supported cloud deployments on AWS and Azure to enhance system stability
 
-</details> <details> <summary><strong>Infrastructure Automation Intern @ NYC DOE (May 2025 – Present)</strong></summary>
+</details> <details> <summary><strong>Infrastructure QA Engineer Intern @ NYC Department of Education (May 2025 – Aug 2025)</strong></summary>
 
-* Automated server and image deployment across 50+ NYC school sites using PowerShell
+* Deployed and configured servers, IP-based systems, and desktop images across NYC schools
 
-* Resolved 95% of support tickets on first attempt through precise diagnostics and scripting
+* Scripted automation tools to streamline system rollouts and reduce manual setup time.
 
-* Performed in-person audits and configured hardware/software in coordination with borough-wide teams
+* Diagnosed hardware/software issues and executed on-site audits across 5 boroughs
 
-</details>
+* Authored technical documentation and collaborated with vendors to support infrastructure reliability
+
 </details>
 </details>
 
