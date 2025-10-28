@@ -208,6 +208,11 @@
         color: transparent;
         animation: gradientShift 8s ease infinite;
       }
+      @media (max-width: 768px) {
+        header {
+          display: none;
+        }
+      }
       .subtitle {
         color: var(--muted);
         font-size: 18px;
@@ -263,7 +268,7 @@
 
       /* Sections */
       section {
-        padding: 42px 0;
+        padding: 48px 0;
       }
       .section-title {
         font-size: 20px;
@@ -327,6 +332,13 @@
 
       .actions {
         display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+      .backToTop {
+        display: flex;
+        justify-content: center;
         gap: 0.5rem;
         flex-wrap: wrap;
         margin-top: 10px;
@@ -572,11 +584,13 @@
 
       <!-- TL;DR -->
       <section aria-labelledby="tldr-title">
-        <h2 id="tldr-title" class="section-title">TL;DR</h2>
-        <div class="card tldr reveal">
-          CS '26 @ CUNY Brooklyn · GPA 3.6 
-          Full-Stack engineer who turns datainto fast, reliable products. 
-          Open to SWE internships and new-gradroles.
+        <h2 id="tldr-title" class="section-title mb-2">TL;DR</h2>
+        <div
+          class="card tldr reveal text-center leading-snug p-[10px] pt-[4px]"
+        >
+          CS '26 @ CUNY Brooklyn · GPA 3.6<br />
+          Full-Stack engineer who turns data into fast, reliable products.<br />
+          Open to SWE internships and new-grad roles.
         </div>
       </section>
 
@@ -697,7 +711,7 @@
               </li>
             </ul>
           </div>
-          <br>
+          <br />
           <div class="role">
             <h4>
               Infrastructure QA Engineer Intern at NYC Department of Education
@@ -750,7 +764,11 @@
             <strong>B.S. Computer Science</strong> at Brooklyn College (CUNY)
           </p>
           <p>Expected Graduation: June 2026 · GPA 3.6</p>
-           <p>Relevant Coursework: Data Structures & Algorithms, Object Oriented Programming, Databases, Computer Architecture, Artifical Intelligence, etc.</p>
+          <p>
+            Relevant Coursework: Data Structures & Algorithms, Object Oriented
+            Programming, Databases, Computer Architecture, Artifical
+            Intelligence, etc.
+          </p>
         </div>
       </section>
 
@@ -758,12 +776,24 @@
       <section id="contact" aria-labelledby="contact-title">
         <h2 id="contact-title" class="section-title">Contact</h2>
         <div class="card reveal">
-          <ul class="contact-list">
+          <ul
+            class="contact-list"
+            style="list-style: none; padding: 0; margin: 0"
+          >
             <li>
               Email:
-              <a href="mailto:yassinbenelhajlahsen@gmail.com"
-                >yassinbenelhajlahsen@gmail.com</a
+              <a
+                href="mailto:yassinbenelhajlahsen@gmail.com"
+                style="
+                  color: var(--accent);
+                  text-decoration: none;
+                  transition: all 0.2s ease;
+                "
+                onmouseover="this.style.textDecoration='underline'"
+                onmouseout="this.style.textDecoration='none'"
               >
+                yassinbenelhajlahsen@gmail.com
+              </a>
             </li>
             <li>
               LinkedIn:
@@ -771,8 +801,16 @@
                 href="https://linkedin.com/in/yassin-benelhajlahsen"
                 target="_blank"
                 rel="noopener noreferrer"
-                >linkedin.com/in/yassin-benelhajlahsen</a
+                style="
+                  color: var(--accent);
+                  text-decoration: none;
+                  transition: all 0.2s ease;
+                "
+                onmouseover="this.style.textDecoration='underline'"
+                onmouseout="this.style.textDecoration='none'"
               >
+                linkedin.com/in/yassin-benelhajlahsen
+              </a>
             </li>
             <li>
               Resume:
@@ -780,12 +818,34 @@
                 href="../Yassin-Benelhajlahsen_Resume.pdf"
                 target="_blank"
                 rel="noopener"
-                >PDF</a
+                style="
+                  color: var(--accent);
+                  text-decoration: none;
+                  transition: all 0.2s ease;
+                "
+                onmouseover="this.style.textDecoration='underline'"
+                onmouseout="this.style.textDecoration='none'"
               >
+                PDF
+              </a>
             </li>
           </ul>
-          <div class="actions" style="margin-top: 12px">
-            <a class="action" href="#" id="topLink">Back to top</a>
+
+          <div class="backToTop" style="margin-top: 12px; text-align: center">
+            <a
+              class="action"
+              href="#"
+              id="topLink"
+              style="
+                text-decoration: none;
+                color: var(--accent);
+                transition: all 0.2s ease;
+              "
+              onmouseover="this.style.textDecoration='underline'"
+              onmouseout="this.style.textDecoration='none'"
+            >
+              Back to top
+            </a>
           </div>
         </div>
       </section>
