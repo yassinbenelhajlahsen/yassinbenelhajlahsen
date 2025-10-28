@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yassin Benelhajlahsen — Resume</title>
+    <meta
+      name="description"
+      content="Yassin Benelhajlahsen | Full-Stack Engineer, CS '26. Projects, experience, tech stack, education, and contact."
+    />
+    <link rel="canonical" href="https://yassinbenelhajlahsen.github.io" />
+    <meta property="og:title" content="Yassin Benelhajlahsen — Resume" />
+    <meta
+      property="og:description"
+      content="Full-Stack Engineer | CS '26 | Projects, Experience, Tech, Education, Contact"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0d1117" />
+    <style>
+      :root {
+        --bg: #0d1117;
+        --bg-elev: #111827;
+        --card: #0b1220;
+        --text: #c9d1d9;
+        --muted: #8b949e;
+        --border: #1f2937;
+        --accent: #58a6ff;
+        --grad-a: #06b6d4;
+        --grad-b: #8b5cf6;
+        --grad-c: #ec4899;
+        --ring: rgba(88, 166, 255, 0.4);
+        --success: #22c55e;
+        --warn: #f59e0b;
+        --danger: #ef4444;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.35),
+          0 1px 0 rgba(255, 255, 255, 0.02) inset;
+        --radius: 16px;
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #f8fafc;
+          --bg-elev: #ffffff;
+          --card: #ffffff;
+          --text: #0b1320;
+          --muted: #475569;
+          --border: #e2e8f0;
+          --accent: #2563eb;
+          --ring: rgba(37, 99, 235, 0.35);
+        }
+      }
+
+      /* Smooth animated gradient for name */
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Subtle float effect for hero buttons */
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-6px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: radial-gradient(
+            1200px 600px at 20% -10%,
+            rgba(139, 92, 246, 0.15),
+            transparent 50%
+          ),
+          radial-gradient(
+            1000px 500px at 120% 10%,
+            rgba(6, 182, 212, 0.12),
+            transparent 50%
+          ),
+          var(--bg);
+        color: var(--text);
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+          Inter, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        line-height: 1.6;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      .container {
+        width: min(1100px, 92vw);
+        margin: 0 auto;
+      }
+
+      /* Skip link */
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+      .skip-link:focus {
+        left: 1rem;
+        top: 1rem;
+        width: auto;
+        height: auto;
+        padding: 0.5rem 0.75rem;
+        background: var(--bg-elev);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+      }
+
+      /* Header */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        backdrop-filter: saturate(160%) blur(12px);
+        background: color-mix(in oklab, var(--bg) 80%, transparent);
+        border-bottom: 1px solid var(--border);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.8rem 0;
+      }
+      .brand {
+        display: flex;
+        align-items: baseline;
+        gap: 0.5rem;
+        font-weight: 800;
+        letter-spacing: 0.25px;
+      }
+      .brand .name {
+        font-size: 1.05rem;
+      }
+      .brand .tag {
+        color: var(--muted);
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 0.6rem;
+        margin: 0;
+        padding: 0;
+      }
+      nav a {
+        display: inline-block;
+        padding: 0.5rem 0.75rem;
+        border-radius: 999px;
+        font-weight: 600;
+        color: var(--text);
+        border: 1px solid transparent;
+      }
+      nav a:hover {
+        background: color-mix(in oklab, var(--bg-elev) 75%, transparent);
+      }
+      nav a.active {
+        border-color: var(--border);
+        background: color-mix(in oklab, var(--bg-elev) 85%, transparent);
+      }
+
+      /* Hero */
+      .hero {
+        padding: 64px 0 28px;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: clamp(34px, 5vw, 52px);
+        line-height: 1.1;
+        margin: 0 0 6px;
+        font-weight: 900;
+      }
+      .gradient-text {
+        background: linear-gradient(
+          270deg,
+          var(--grad-a),
+          var(--grad-b),
+          var(--grad-c),
+          var(--grad-a)
+        );
+        background-size: 800% 800%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: gradientShift 8s ease infinite;
+      }
+      .subtitle {
+        color: var(--muted);
+        font-size: 18px;
+        margin-top: 0;
+      }
+
+      .cta-row {
+        display: flex;
+        gap: 0.75rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 16px 0 4px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.65rem 0.95rem;
+        border-radius: 12px;
+        font-weight: 700;
+        background: color-mix(in oklab, var(--bg-elev) 85%, transparent);
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        transition: transform 0.18s ease, border-color 0.18s ease,
+          background 0.18s ease;
+        will-change: transform;
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+        border-color: color-mix(in oklab, var(--accent) 50%, var(--border));
+      }
+      .btn:active {
+        transform: translateY(0);
+      }
+      .btn.hero {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .quicklinks {
+        margin-top: 8px;
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .chip {
+        font-weight: 700;
+        border: 1px solid var(--border);
+        background: color-mix(in oklab, var(--bg-elev) 88%, transparent);
+        padding: 0.45rem 0.8rem;
+        border-radius: 999px;
+      }
+
+      /* Sections */
+      section {
+        padding: 42px 0;
+      }
+      .section-title {
+        font-size: 20px;
+        letter-spacing: 0.3px;
+        margin: 0 0 18px;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .hr {
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--border),
+          transparent
+        );
+        border: none;
+        margin: 18px 0 12px;
+      }
+
+      /* Cards & grids */
+      .grid {
+        display: grid;
+        gap: 16px;
+      }
+      .grid.two {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .grid.three {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      @media (max-width: 900px) {
+        .grid.two,
+        .grid.three {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .card {
+        background: radial-gradient(
+            600px 300px at 10% -20%,
+            rgba(88, 166, 255, 0.08),
+            transparent 40%
+          ),
+          var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 18px;
+        box-shadow: var(--shadow);
+      }
+      .card h3 {
+        margin: 4px 0 2px;
+        font-size: 18px;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 14px;
+        margin-top: -4px;
+      }
+
+      .actions {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+      .action {
+        font-weight: 700;
+        border: 1px solid var(--border);
+        padding: 0.45rem 0.7rem;
+        border-radius: 10px;
+        background: color-mix(in oklab, var(--bg-elev) 90%, transparent);
+      }
+      .action:hover {
+        border-color: var(--accent);
+      }
+
+      /* TLDR */
+      .tldr {
+        white-space: pre-line;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+        font-size: 15px;
+        background: var(--bg-elev);
+        border: 1px dashed var(--border);
+        padding: 14px 16px;
+        border-radius: 12px;
+      }
+      .timeline:before {
+        background: color-mix(in oklab, var(--border) 70%, transparent);
+        width: 1px;
+        left: 20px;
+        opacity: 0.4;
+      }
+      .role:before {
+        background: var(--accent);
+        width: 8px;
+        height: 8px;
+        border: none;
+        box-shadow: none;
+        left: 16px;
+      }
+      /* Experience timeline */
+      .timeline {
+        position: relative;
+        margin-left: 10px;
+      }
+      .role {
+        position: relative;
+        padding-left: 40px;
+        margin: 0 0 18px;
+      }
+      .role h4 {
+        margin: 0;
+        font-size: 17px;
+      }
+      .role .when {
+        color: var(--muted);
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .role ul {
+        margin: 8px 0 0 0;
+        padding-left: 18px;
+      }
+      .role li {
+        margin: 6px 0;
+      }
+
+      /* Tech stack */
+      .stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+      }
+      .pill {
+        border: 1px solid var(--border);
+        padding: 0.4rem 0.65rem;
+        border-radius: 999px;
+        font-weight: 700;
+        background: color-mix(in oklab, var(--bg-elev) 90%, transparent);
+      }
+
+      /* Contact */
+      .contact-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 8px;
+      }
+      .contact-list a {
+        word-break: break-word;
+      }
+
+      /* Footer */
+      footer {
+        padding: 34px 0 60px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      /* Reveal on scroll */
+      .reveal {
+        opacity: 0;
+        transform: translateY(12px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+      }
+      .reveal.show {
+        opacity: 1;
+        transform: none;
+      }
+
+      /* Print styles */
+      @media print {
+        header,
+        .quicklinks,
+        .cta-row,
+        .hr,
+        .actions,
+        .action,
+        .chip,
+        .btn,
+        .skip-link,
+        .scrolltop {
+          display: none !important;
+        }
+        body {
+          background: #ffffff;
+          color: #000;
+        }
+        .card {
+          border: 1px solid #bbb;
+          box-shadow: none;
+        }
+        a {
+          color: #000;
+          text-decoration: underline;
+        }
+        .container {
+          width: 100%;
+        }
+      }
+
+      /* Scroll to top button */
+      .scrolltop {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        z-index: 45;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+      }
+      .scrolltop.show {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .scrolltop .btn {
+        border-radius: 999px;
+        padding: 0.6rem 0.8rem;
+      }
+    </style>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Yassin Benelhajlahsen",
+        "jobTitle": "Full-Stack Engineer",
+        "email": "mailto:yassinbenelhajlahsen@gmail.com",
+        "url": "https://yassinbenelhajlahsen.github.io",
+        "sameAs": [
+          "https://linkedin.com/in/yassin-benelhajlahsen",
+          "https://github.com/yassinbenelhajlahsen"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Header -->
+    <header aria-label="Primary">
+      <div class="container nav">
+        <div class="brand">
+          <span class="name">Yassin Benelhajlahsen</span>
+          <span class="tag">Full-Stack Engineer</span>
+        </div>
+        <nav aria-label="In-page navigation">
+          <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#tech-stack">Tech</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="container">
+      <!-- Hero -->
+      <section class="hero">
+        <h1 class="gradient-text">Yassin Benelhajlahsen</h1>
+        <p class="subtitle">Full-Stack Engineer • CS '26</p>
+
+        <div class="cta-row">
+          <a
+            class="btn hero"
+            href="https://linkedin.com/in/yassin-benelhajlahsen"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            >🔗 LinkedIn</a
+          >
+          <a
+            class="btn hero"
+            href="mailto:yassinbenelhajlahsen@gmail.com"
+            aria-label="Email"
+            >✉️ Email</a
+          >
+          <a
+            class="btn hero"
+            href="./Yassin-Benelhajlahsen_Resume.pdf"
+            download
+            target="_blank"
+            rel="noopener"
+            aria-label="Download resume PDF"
+            >📝 Resume</a
+          >
+        </div>
+
+        <div class="quicklinks" aria-label="Quick section links">
+          <a class="chip" href="#projects">Projects</a>
+          <a class="chip" href="#experience">Experience</a>
+          <a class="chip" href="#tech-stack">Tech Stack</a>
+          <a class="chip" href="#education">Education</a>
+          <a class="chip" href="#contact">Contact</a>
+        </div>
+      </section>
+
+      <hr class="hr" />
+
+      <!-- TL;DR -->
+      <section aria-labelledby="tldr-title">
+        <h2 id="tldr-title" class="section-title">TL;DR</h2>
+        <div class="card tldr reveal">
+          CS '26 @ CUNY Brooklyn · GPA 3.6 
+          Full-Stack engineer who turns datainto fast, reliable products. 
+          Open to SWE internships and new-gradroles.
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title" class="section-title">Projects</h2>
+        <div class="grid two">
+          <article class="card reveal" aria-labelledby="proj-scorva-title">
+            <h3 id="proj-scorva-title">Scorva</h3>
+            <p class="meta">Sports analytics web app for NBA, NFL and NHL.</p>
+            <div class="actions">
+              <a
+                class="action"
+                href="https://scorva.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Live</a
+              >
+              <a
+                class="action"
+                href="https://github.com/yassinbenelhajlahsen/Scorva"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Code</a
+              >
+            </div>
+            <br />
+            <p class="meta">
+              React · Next.js · Express · TailwindCSS · PostgreSQL
+            </p>
+          </article>
+          <article class="card reveal" aria-labelledby="proj-sirat-title">
+            <h3 id="proj-sirat-title">Sirat</h3>
+            <p class="meta">Mobile Islamic utility app.</p>
+            <div class="actions">
+              <a
+                class="action"
+                href="https://sirat.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Live</a
+              >
+              <a
+                class="action"
+                href="https://github.com/yassinbenelhajlahsen/Sirat"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Code</a
+              >
+            </div>
+            <br />
+            <p class="meta">React Native · Expo</p>
+          </article>
+          <article class="card reveal" aria-labelledby="proj-stat-title">
+            <h3 id="proj-stat-title">StatTracker</h3>
+            <p class="meta">NBA analytic CLI tool.</p>
+            <div class="actions">
+              <a
+                class="action"
+                href="https://github.com/yassinbenelhajlahsen/StatTracker"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Code</a
+              >
+            </div>
+            <br />
+            <p class="meta">Java · MariaDB</p>
+          </article>
+          <article class="card reveal" aria-labelledby="proj-more-title">
+            <h3 id="proj-more-title">More</h3>
+            <p class="meta">Explore all repositories and contributions.</p>
+            <div class="actions">
+              <a
+                class="action"
+                href="https://github.com/yassinbenelhajlahsen?tab=repositories"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Browse</a
+              >
+            </div>
+            <br />
+            <p class="meta">Open source, experiments, and more</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" aria-labelledby="experience-title">
+        <h2 id="experience-title" class="section-title">Experience</h2>
+        <div class="card reveal timeline">
+          <div class="role">
+            <h4>Software Engineer Intern at Soaper</h4>
+            <div class="when">June 2025 – Present</div>
+            <ul>
+              <li>
+                Engineered full-stack features with React, FastAPI, and
+                PostgreSQL, reducing frontend latency by 25% through API
+                optimizations and improved component rendering.
+              </li>
+              <li>
+                Built a multi-parameter radiology search with indexed queries,
+                reaching sub-millisecond DB lookups on 120k+ rows and p95 under
+                20 ms API response times via batching and caching.
+              </li>
+              <li>
+                Developed scalable, reusable UI components in TypeScript,
+                cutting feature development time by 30% while ensuring
+                WCAG-compliant accessibility across web and mobile.
+              </li>
+              <li>
+                Collaborated with clinicians to translate medical workflows into
+                intuitive software, improving data entry efficiency by 40% and
+                streamlining daily documentation.
+              </li>
+              <li>
+                Contributed to HIPAA-aware features and infrastructure
+                enhancements on AWS and Azure for reliability and scalability.
+              </li>
+            </ul>
+          </div>
+          <br>
+          <div class="role">
+            <h4>
+              Infrastructure QA Engineer Intern at NYC Department of Education
+            </h4>
+            <div class="when">May 2025 – Aug 2025</div>
+            <ul>
+              <li>
+                Deployed and configured servers, IP-based systems, and desktop
+                images across NYC schools, automating setup tasks to save hours
+                per deployment.
+              </li>
+              <li>
+                Created automation scripts that streamlined rollouts,
+                diagnostics, and on-site audits across five boroughs, improving
+                system reliability and support efficiency.
+              </li>
+              <li>
+                Authored technical documentation and collaborated with vendors
+                to support district-wide infrastructure stability and compliance
+                with IT standards.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tech stack -->
+      <section id="tech-stack" aria-labelledby="tech-title">
+        <h2 id="tech-title" class="section-title">Tech Stack</h2>
+        <div class="card reveal">
+          <div class="stack">
+            <span class="pill">JavaScript</span>
+            <span class="pill">TypeScript</span>
+            <span class="pill">Python</span>
+            <span class="pill">Java</span>
+            <span class="pill">React</span>
+            <span class="pill">Next.js</span>
+            <span class="pill">Node.js</span>
+            <span class="pill">FastAPI</span>
+            <span class="pill">PostgreSQL</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section id="education" aria-labelledby="edu-title">
+        <h2 id="edu-title" class="section-title">Education</h2>
+        <div class="card reveal">
+          <p>
+            <strong>B.S. Computer Science</strong> at Brooklyn College (CUNY)
+          </p>
+          <p>Expected Graduation: June 2026 · GPA 3.6</p>
+           <p>Relevant Coursework: Data Structures & Algorithms, Object Oriented Programming, Databases, Computer Architecture, Artifical Intelligence, etc.</p>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title" class="section-title">Contact</h2>
+        <div class="card reveal">
+          <ul class="contact-list">
+            <li>
+              Email:
+              <a href="mailto:yassinbenelhajlahsen@gmail.com"
+                >yassinbenelhajlahsen@gmail.com</a
+              >
+            </li>
+            <li>
+              LinkedIn:
+              <a
+                href="https://linkedin.com/in/yassin-benelhajlahsen"
+                target="_blank"
+                rel="noopener noreferrer"
+                >linkedin.com/in/yassin-benelhajlahsen</a
+              >
+            </li>
+            <li>
+              Resume:
+              <a
+                href="./Yassin-Benelhajlahsen_Resume.pdf"
+                target="_blank"
+                rel="noopener"
+                >PDF</a
+              >
+            </li>
+          </ul>
+          <div class="actions" style="margin-top: 12px">
+            <a class="action" href="#" id="topLink">Back to top</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">© <span id="yr"></span> Yassin Benelhajlahsen</div>
+    </footer>
+
+    <script>
+      // Reduced motion respect
+      const prefersReduced = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      // Reveal on scroll
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("show");
+              observer.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+
+      // Active nav highlighting
+      const sections = [...document.querySelectorAll("main section[id]")];
+      const navLinks = [...document.querySelectorAll("header nav a")];
+      const spy = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const id = entry.target.getAttribute("id");
+            const link = navLinks.find(
+              (a) => a.getAttribute("href") === "#" + id
+            );
+            if (!link) return;
+            if (entry.isIntersecting) {
+              navLinks.forEach((a) => a.classList.remove("active"));
+              link.classList.add("active");
+            }
+          });
+        },
+        { rootMargin: "-45% 0px -50% 0px", threshold: 0.05 }
+      );
+      sections.forEach((s) => spy.observe(s));
+
+      // Copy email helpers
+      function copyEmail() {
+        navigator.clipboard
+          .writeText("yassinbenelhajlahsen@gmail.com")
+          .then(() => {
+            const msg = document.createElement("div");
+            msg.textContent = "Email copied";
+            msg.style.position = "fixed";
+            msg.style.bottom = "20px";
+            msg.style.left = "50%";
+            msg.style.transform = "translateX(-50%)";
+            msg.style.background = "var(--bg-elev)";
+            msg.style.border = "1px solid var(--border)";
+            msg.style.padding = "8px 12px";
+            msg.style.borderRadius = "10px";
+            msg.style.boxShadow = "var(--shadow)";
+            document.body.appendChild(msg);
+            setTimeout(() => msg.remove(), 1300);
+          });
+      }
+      document
+        .getElementById("copyEmail")
+        ?.addEventListener("click", copyEmail);
+      document
+        .getElementById("copyEmail2")
+        ?.addEventListener("click", copyEmail);
+
+      // Back to top
+      const topLink = document.getElementById("topLink");
+      if (topLink)
+        topLink.addEventListener("click", (e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+      // Scroll-to-top button
+      const scrollBtn = document.getElementById("scrollBtn");
+      scrollBtn.addEventListener("click", () =>
+        window.scrollTo({ top: 0, behavior: "smooth" })
+      );
+      const toggleScrollBtn = () => {
+        if (window.scrollY > 400) scrollBtn.classList.add("show");
+        else scrollBtn.classList.remove("show");
+      };
+      window.addEventListener("scroll", toggleScrollBtn);
+
+      // Year
+      document.getElementById("yr").textContent = new Date().getFullYear();
+
+      // Protect links with noopener when target blank
+      document.querySelectorAll('a[target="_blank"]').forEach((a) => {
+        if (!a.rel.includes("noopener")) a.rel += " noopener";
+      });
+    </script>
+  </body>
+</html>
