@@ -1,3 +1,16 @@
+<style>
+  body {
+    background-color: #0d1117; /* GitHub dark background */
+    color: #c9d1d9; /* GitHub dark text color */
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  a {
+    color: #58a6ff;
+  }
+</style>
+
 <!-- Hero -->
 <div align="center">
   <h1 style="font-weight:800; font-size:46px; margin:0 0 6px; line-height:1.15">
