@@ -3,19 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Yassin Benelhajlahsen — Resume</title>
+    <title>Yassin Benelhajlahsen</title>
     <meta
       name="description"
       content="Yassin Benelhajlahsen | Full-Stack Engineer, CS '26. Projects, experience, tech stack, education, and contact."
     />
     <link rel="canonical" href="https://yassinbenelhajlahsen.github.io" />
-    <meta property="og:title" content="Yassin Benelhajlahsen — Resume" />
+    <meta property="og:title" content="Yassin Benelhajlahsen" />
     <meta
       property="og:description"
       content="Full-Stack Engineer | CS '26 | Projects, Experience, Tech, Education, Contact"
     />
     <meta property="og:type" content="website" />
     <meta name="theme-color" content="#0d1117" />
+    <link rel="icon" type="image/png" href="favicon.png" />
     <style>
       :root {
         --bg: #0d1117;
@@ -138,6 +139,11 @@
         backdrop-filter: saturate(160%) blur(12px);
         background: color-mix(in oklab, var(--bg) 80%, transparent);
         border-bottom: 1px solid var(--border);
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+      }
+      header.scrolled {
+        background: var(--bg-elev);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
       }
       .nav {
         display: flex;
@@ -174,13 +180,18 @@
         font-weight: 600;
         color: var(--text);
         border: 1px solid transparent;
+        transition: all 0.25s ease;
       }
       nav a:hover {
         background: color-mix(in oklab, var(--bg-elev) 75%, transparent);
+        transform: scale(1.1);
       }
       nav a.active {
-        border-color: var(--border);
-        background: color-mix(in oklab, var(--bg-elev) 85%, transparent);
+        transform: scale(1.05);
+        border-color: var(--accent);
+        color: var(--accent);
+        background: color-mix(in oklab, var(--bg-elev) 75%, var(--accent) 10%);
+        box-shadow: 0 0 12px var(--ring);
       }
 
       /* Hero */
@@ -257,13 +268,22 @@
         gap: 0.5rem;
         justify-content: center;
         flex-wrap: wrap;
+        transition: all 0.25s ease;
       }
+
       .chip {
         font-weight: 700;
         border: 1px solid var(--border);
         background: color-mix(in oklab, var(--bg-elev) 88%, transparent);
         padding: 0.45rem 0.8rem;
         border-radius: 999px;
+        transition: all 0.25s ease;
+      }
+      .chip:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: color-mix(in oklab, var(--bg-elev) 75%, var(--accent) 10%);
+        box-shadow: 0 0 12px var(--ring);
       }
 
       /* Sections */
@@ -349,9 +369,14 @@
         padding: 0.45rem 0.7rem;
         border-radius: 10px;
         background: color-mix(in oklab, var(--bg-elev) 90%, transparent);
+        transition: all 0.25s ease;
       }
       .action:hover {
+        transform: scale(1.1);
         border-color: var(--accent);
+        color: var(--accent);
+        background: color-mix(in oklab, var(--bg-elev) 75%, var(--accent) 10%);
+        box-shadow: 0 0 12px var(--ring);
       }
 
       /* TLDR */
@@ -390,6 +415,7 @@
         margin: 0 0 18px;
       }
       .role h4 {
+        color: var(--accent);
         margin: 0;
         font-size: 17px;
       }
@@ -413,12 +439,24 @@
         gap: 0.5rem;
         justify-content: center;
       }
+
       .pill {
         border: 1px solid var(--border);
         padding: 0.4rem 0.65rem;
-        border-radius: 999px;
+        border-radius: 1999px;
         font-weight: 700;
         background: color-mix(in oklab, var(--bg-elev) 90%, transparent);
+        transition: all 0.25s ease;
+        cursor: pointer;
+        display: inline-block;
+      }
+
+      .pill:hover {
+        transform: scale(1.1);
+        border-color: var(--accent);
+        color: var(--accent);
+        background: color-mix(in oklab, var(--bg-elev) 75%, var(--accent) 10%);
+        box-shadow: 0 0 12px var(--ring);
       }
 
       /* Contact */
@@ -619,7 +657,7 @@
             </div>
             <br />
             <p class="meta">
-              React · Next.js · Express · TailwindCSS · PostgreSQL
+              React · Node.js · Express · TailwindCSS · PostgreSQL
             </p>
           </article>
           <article class="card reveal" aria-labelledby="proj-sirat-title">
@@ -642,10 +680,12 @@
               >
             </div>
             <br />
-            <p class="meta">React Native · Expo</p>
+            <p class="meta">
+              React Native · Expo · AsyncStorage · Google Places API
+            </p>
           </article>
           <article class="card reveal" aria-labelledby="proj-stat-title">
-            <h3 id="proj-stat-title">StatTracker</h3>
+            <h3 id="proj-stat-title">Stat Tracker</h3>
             <p class="meta">NBA analytic CLI tool.</p>
             <div class="actions">
               <a
@@ -740,18 +780,26 @@
 
       <!-- Tech stack -->
       <section id="tech-stack" aria-labelledby="tech-title">
-        <h2 id="tech-title" class="section-title">Tech Stack</h2>
+        <h2 id="tech-title" class="section-title">Tech Stack & Tools</h2>
         <div class="card reveal">
           <div class="stack">
             <span class="pill">JavaScript</span>
             <span class="pill">TypeScript</span>
             <span class="pill">Python</span>
             <span class="pill">Java</span>
+            <span class="pill">C++</span>
+            <span class="pill">SQL</span>
             <span class="pill">React</span>
             <span class="pill">Next.js</span>
             <span class="pill">Node.js</span>
             <span class="pill">FastAPI</span>
+            <span class="pill">Node.js</span>
             <span class="pill">PostgreSQL</span>
+            <span class="pill">MariaDB</span>
+            <span class="pill">Git</span>
+            <span class="pill">GitHub</span>
+            <span class="pill">AWS</span>
+            <span class="pill">CI/CD Pipelines</span>
           </div>
         </div>
       </section>
@@ -893,7 +941,7 @@
             }
           });
         },
-        { rootMargin: "-45% 0px -50% 0px", threshold: 0.05 }
+        { rootMargin: "-50% 0px -50% 0px", threshold: 0 }
       );
       sections.forEach((s) => spy.observe(s));
 
@@ -942,6 +990,16 @@
         else scrollBtn.classList.remove("show");
       };
       window.addEventListener("scroll", toggleScrollBtn);
+
+      // Header scroll effect
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector("header");
+        if (window.scrollY > 0) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
 
       // Year
       document.getElementById("yr").textContent = new Date().getFullYear();
