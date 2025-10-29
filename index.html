@@ -379,9 +379,8 @@
         box-shadow: 0 0 12px var(--ring);
       }
 
-      /* TLDR */
-      .tldr {
-        white-space: pre-line;
+      /* about */
+      .about {
         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
           "Liberation Mono", "Courier New", monospace;
         font-size: 15px;
@@ -390,29 +389,8 @@
         padding: 14px 16px;
         border-radius: 12px;
       }
-      .timeline:before {
-        background: color-mix(in oklab, var(--border) 70%, transparent);
-        width: 1px;
-        left: 20px;
-        opacity: 0.4;
-      }
-      .role:before {
-        background: var(--accent);
-        width: 8px;
-        height: 8px;
-        border: none;
-        box-shadow: none;
-        left: 16px;
-      }
-      /* Experience timeline */
-      .timeline {
-        position: relative;
-        margin-left: 10px;
-      }
       .role {
-        position: relative;
-        padding-left: 40px;
-        margin: 0 0 18px;
+        margin: 0 0 18px;  
       }
       .role h4 {
         color: var(--accent);
@@ -608,27 +586,24 @@
             >📝 Resume</a
           >
         </div>
-
-        <div class="quicklinks" aria-label="Quick section links">
-          <a class="chip" href="#projects">Projects</a>
-          <a class="chip" href="#experience">Experience</a>
-          <a class="chip" href="#tech-stack">Tech Stack</a>
-          <a class="chip" href="#education">Education</a>
-          <a class="chip" href="#contact">Contact</a>
-        </div>
       </section>
 
       <hr class="hr" />
 
-      <!-- TL;DR -->
-      <section aria-labelledby="tldr-title">
-        <h2 id="tldr-title" class="section-title mb-2">TL;DR</h2>
-        <div
-          class="card tldr reveal text-center leading-snug p-[10px] pt-[4px]"
-        >
-          CS '26 @ CUNY Brooklyn · GPA 3.6<br />
-          Full-Stack engineer who turns data into fast, reliable products.<br />
-          Open to SWE internships and new-grad roles.
+      <!-- About Section -->
+      <section aria-labelledby="about-title">
+        <h2 id="about-title" class="section-title mb-2">About</h2>
+        <div class="card about reveal">
+          CS ’26 @ CUNY Brooklyn College · GPA 3.6<br />
+          <br />
+          Full-stack engineer passionate about building fast, reliable, and
+          secure web applications.<br />
+          <br />
+          Experienced across React, FastAPI, Node.js and PostgreSQL — from
+          frontend UI to backend systems and cloud deployment.<br />
+          <br />
+          Curious, adaptable, and open to SWE new-grad and internships
+          opportunities.
         </div>
       </section>
 
@@ -636,6 +611,35 @@
       <section id="projects" aria-labelledby="projects-title">
         <h2 id="projects-title" class="section-title">Projects</h2>
         <div class="grid two">
+          <article class="card" style="grid-column: span 2">
+            <h3>SoaperNote</h3>
+            <p class="meta">
+              HIPAA-aware clinical notes w/ AI transcription, voice-to-edit
+              flows, and dynamic SOAP templates as an intern with Soaper.
+            </p>
+            <ul>
+              <li>
+                Implemented client-side AES-GCM-256 encryption using per-user
+                non-extractable WebCrypto keys in IndexedDB for secure local
+                data isolation.
+              </li>
+              <br />
+              <li>
+                Structured a modular FastAPI backend with routers for notes,
+                subscriptions, and AI ‘magic-wand’ endpoints.
+              </li>
+              <br />
+              <li>
+                Integrated Firebase Auth and Firestore with Stripe
+                subscriptions, quotas, and webhooks for secure billing and user
+                management.
+              </li>
+            </ul>
+            <br>
+            <p class="meta">
+              React · FastAPI · TailwindCSS · Stripe · Firebase
+            </p>
+          </article>
           <article class="card reveal" aria-labelledby="proj-scorva-title">
             <h3 id="proj-scorva-title">Scorva</h3>
             <p class="meta">Sports analytics web app for NBA, NFL and NHL.</p>
@@ -720,7 +724,7 @@
       <!-- Experience -->
       <section id="experience" aria-labelledby="experience-title">
         <h2 id="experience-title" class="section-title">Experience</h2>
-        <div class="card reveal timeline">
+        <div class="card reveal">
           <div class="role">
             <h4>Software Engineer Intern at Soaper</h4>
             <div class="when">June 2025 – Present</div>
@@ -808,14 +812,14 @@
       <section id="education" aria-labelledby="edu-title">
         <h2 id="edu-title" class="section-title">Education</h2>
         <div class="card reveal">
-          <p>
-            <strong>B.S. Computer Science</strong> at Brooklyn College (CUNY)
+          <p style="color: var(--accent)">
+            <strong>B.S. Computer Science at Brooklyn College (CUNY) </strong>
           </p>
-          <p>Expected Graduation: June 2026 · GPA 3.6</p>
+          <p>Expected Graduation: June 2026 · GPA 3.6/4.0</p>
           <p>
             Relevant Coursework: Data Structures & Algorithms, Object Oriented
             Programming, Databases, Computer Architecture, Artifical
-            Intelligence, etc.
+            Intelligence.
           </p>
         </div>
       </section>
@@ -874,7 +878,7 @@
                 onmouseover="this.style.textDecoration='underline'"
                 onmouseout="this.style.textDecoration='none'"
               >
-                PDF
+                Click to Download
               </a>
             </li>
           </ul>
@@ -889,7 +893,6 @@
                 color: var(--accent);
                 transition: all 0.2s ease;
               "
-              onmouseover="this.style.textDecoration='underline'"
               onmouseout="this.style.textDecoration='none'"
             >
               Back to top
@@ -945,33 +948,6 @@
       );
       sections.forEach((s) => spy.observe(s));
 
-      // Copy email helpers
-      function copyEmail() {
-        navigator.clipboard
-          .writeText("yassinbenelhajlahsen@gmail.com")
-          .then(() => {
-            const msg = document.createElement("div");
-            msg.textContent = "Email copied";
-            msg.style.position = "fixed";
-            msg.style.bottom = "20px";
-            msg.style.left = "50%";
-            msg.style.transform = "translateX(-50%)";
-            msg.style.background = "var(--bg-elev)";
-            msg.style.border = "1px solid var(--border)";
-            msg.style.padding = "8px 12px";
-            msg.style.borderRadius = "10px";
-            msg.style.boxShadow = "var(--shadow)";
-            document.body.appendChild(msg);
-            setTimeout(() => msg.remove(), 1300);
-          });
-      }
-      document
-        .getElementById("copyEmail")
-        ?.addEventListener("click", copyEmail);
-      document
-        .getElementById("copyEmail2")
-        ?.addEventListener("click", copyEmail);
-
       // Back to top
       const topLink = document.getElementById("topLink");
       if (topLink)
@@ -979,17 +955,6 @@
           e.preventDefault();
           window.scrollTo({ top: 0, behavior: "smooth" });
         });
-
-      // Scroll-to-top button
-      const scrollBtn = document.getElementById("scrollBtn");
-      scrollBtn.addEventListener("click", () =>
-        window.scrollTo({ top: 0, behavior: "smooth" })
-      );
-      const toggleScrollBtn = () => {
-        if (window.scrollY > 400) scrollBtn.classList.add("show");
-        else scrollBtn.classList.remove("show");
-      };
-      window.addEventListener("scroll", toggleScrollBtn);
 
       // Header scroll effect
       window.addEventListener("scroll", () => {
