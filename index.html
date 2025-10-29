@@ -390,7 +390,7 @@
         border-radius: 12px;
       }
       .role {
-        margin: 0 0 18px;  
+        margin: 0 0 18px;
       }
       .role h4 {
         color: var(--accent);
@@ -406,8 +406,8 @@
         margin: 8px 0 0 0;
         padding-left: 18px;
       }
-      .role li {
-        margin: 6px 0;
+      .card ul li {
+        margin-bottom: 0.4rem; 
       }
 
       /* Tech stack */
@@ -568,7 +568,7 @@
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            >🔗 LinkedIn</a
+            >💼 LinkedIn</a
           >
           <a
             class="btn hero"
@@ -611,7 +611,7 @@
       <section id="projects" aria-labelledby="projects-title">
         <h2 id="projects-title" class="section-title">Projects</h2>
         <div class="grid two">
-          <article class="card" style="grid-column: span 2">
+          <article class="card reveal" style="grid-column: 1 / -1">
             <h3>SoaperNote</h3>
             <p class="meta">
               HIPAA-aware clinical notes w/ AI transcription, voice-to-edit
@@ -623,23 +623,21 @@
                 non-extractable WebCrypto keys in IndexedDB for secure local
                 data isolation.
               </li>
-              <br />
               <li>
                 Structured a modular FastAPI backend with routers for notes,
                 subscriptions, and AI ‘magic-wand’ endpoints.
               </li>
-              <br />
               <li>
                 Integrated Firebase Auth and Firestore with Stripe
                 subscriptions, quotas, and webhooks for secure billing and user
                 management.
               </li>
             </ul>
-            <br>
             <p class="meta">
               React · FastAPI · TailwindCSS · Stripe · Firebase
             </p>
           </article>
+
           <article class="card reveal" aria-labelledby="proj-scorva-title">
             <h3 id="proj-scorva-title">Scorva</h3>
             <p class="meta">Sports analytics web app for NBA, NFL and NHL.</p>
@@ -658,12 +656,15 @@
                 rel="noopener noreferrer"
                 >Code</a
               >
+              
             </div>
-            <br />
+                        <br>
+
             <p class="meta">
               React · Node.js · Express · TailwindCSS · PostgreSQL
             </p>
           </article>
+
           <article class="card reveal" aria-labelledby="proj-sirat-title">
             <h3 id="proj-sirat-title">Sirat</h3>
             <p class="meta">Mobile Islamic utility app.</p>
@@ -683,11 +684,13 @@
                 >Code</a
               >
             </div>
-            <br />
+                        <br>
+
             <p class="meta">
               React Native · Expo · AsyncStorage · Google Places API
             </p>
           </article>
+
           <article class="card reveal" aria-labelledby="proj-stat-title">
             <h3 id="proj-stat-title">Stat Tracker</h3>
             <p class="meta">NBA analytic CLI tool.</p>
@@ -700,9 +703,11 @@
                 >Code</a
               >
             </div>
-            <br />
+                        <br>
+
             <p class="meta">Java · MariaDB</p>
           </article>
+
           <article class="card reveal" aria-labelledby="proj-more-title">
             <h3 id="proj-more-title">More</h3>
             <p class="meta">Explore all repositories and contributions.</p>
@@ -715,7 +720,8 @@
                 >Browse</a
               >
             </div>
-            <br />
+                        <br>
+
             <p class="meta">Open source, experiments, and more</p>
           </article>
         </div>
