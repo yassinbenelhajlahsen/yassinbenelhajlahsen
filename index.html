@@ -51,6 +51,18 @@
         }
       }
 
+      /* Light mode overrides (applied when .light-mode is on <html>) */
+      .light-mode {
+        --bg: #f8fafc;
+        --bg-elev: #ffffff;
+        --card: #ffffff;
+        --text: #0b1320;
+        --muted: #475569;
+        --border: #e2e8f0;
+        --accent: #2563eb;
+        --ring: rgba(37, 99, 235, 0.35);
+      }
+
       /* Smooth animated gradient for name */
       @keyframes gradientShift {
         0% {
@@ -100,6 +112,7 @@
         font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
           Inter, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
         line-height: 1.6;
+        transition: background 0.3s ease, color 0.3s ease;
       }
 
       a {
@@ -297,6 +310,8 @@
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
+        transition: background 0.3s ease, color 0.3s ease,
+          border-color 0.3s ease, box-shadow 0.3s ease;
       }
       .hr {
         height: 1px;
@@ -339,6 +354,8 @@
         border-radius: var(--radius);
         padding: 18px;
         box-shadow: var(--shadow);
+        transition: background 0.3s ease, color 0.3s ease,
+          border-color 0.3s ease, box-shadow 0.3s ease;
       }
       .card h3 {
         margin: 4px 0 2px;
@@ -407,7 +424,7 @@
         padding-left: 18px;
       }
       .card ul li {
-        margin-bottom: 0.4rem; 
+        margin-bottom: 0.4rem;
       }
 
       /* Tech stack */
@@ -478,9 +495,6 @@
         .chip,
         .btn,
         .skip-link,
-        .scrolltop {
-          display: none !important;
-        }
         body {
           background: #ffffff;
           color: #000;
@@ -497,24 +511,35 @@
           width: 100%;
         }
       }
-
-      /* Scroll to top button */
-      .scrolltop {
+      .toggle-btn {
         position: fixed;
-        right: 18px;
-        bottom: 18px;
-        z-index: 45;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.2s ease, transform 0.2s ease;
+        top: 0.5rem; /* Moved up for better centering in header area on desktop */
+        right: 1rem;
+        z-index: 50;
+        font-size: 1.2rem;
+        /* Add subtle background for better visibility on mobile */
+        background: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(4px);
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--border); /* Added border for more definition */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow for standout */
       }
-      .scrolltop.show {
-        opacity: 1;
-        pointer-events: auto;
-      }
-      .scrolltop .btn {
-        border-radius: 999px;
-        padding: 0.6rem 0.8rem;
+
+      /* Responsive adjustments for mobile */
+      @media (max-width: 768px) {
+        .toggle-btn {
+          top: auto;
+          bottom: 18px;
+          right: 18px;
+          font-size: 1.2rem; /* Slightly larger icon for better visibility */
+          width: 3rem; /* Increased size for more prominence */
+          height: 3rem;
+        }
       }
     </style>
 
@@ -534,6 +559,14 @@
     </script>
   </head>
   <body>
+    <button
+      id="theme-toggle"
+      class="btn toggle-btn"
+      aria-label="Toggle dark/light mode"
+    >
+      🌙
+    </button>
+
     <a class="skip-link" href="#main">Skip to content</a>
 
     <!-- Header -->
@@ -584,6 +617,14 @@
             rel="noopener"
             aria-label="Download resume PDF"
             >📝 Resume</a
+          >
+          <a
+            class="btn hero"
+            href="https://github.com/yassinbenelhajlahsen/yassinbenelhajlahsen.github.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View source code on GitHub"
+            >💻 Code</a
           >
         </div>
       </section>
@@ -656,9 +697,8 @@
                 rel="noopener noreferrer"
                 >Code</a
               >
-              
             </div>
-                        <br>
+            <br />
 
             <p class="meta">
               React · Node.js · Express · TailwindCSS · PostgreSQL
@@ -684,7 +724,7 @@
                 >Code</a
               >
             </div>
-                        <br>
+            <br />
 
             <p class="meta">
               React Native · Expo · AsyncStorage · Google Places API
@@ -703,7 +743,7 @@
                 >Code</a
               >
             </div>
-                        <br>
+            <br />
 
             <p class="meta">Java · MariaDB</p>
           </article>
@@ -720,7 +760,7 @@
                 >Browse</a
               >
             </div>
-                        <br>
+            <br />
 
             <p class="meta">Open source, experiments, and more</p>
           </article>
@@ -978,6 +1018,27 @@
       // Protect links with noopener when target blank
       document.querySelectorAll('a[target="_blank"]').forEach((a) => {
         if (!a.rel.includes("noopener")) a.rel += " noopener";
+      });
+
+      // Theme toggle functionality
+      const themeToggle = document.getElementById("theme-toggle");
+      const html = document.documentElement;
+
+      // Load saved theme from localStorage
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "light") {
+        html.classList.add("light-mode");
+        themeToggle.textContent = "☀️"; // Sun for light mode
+      } else {
+        themeToggle.textContent = "🌙"; // Moon for dark mode
+      }
+
+      // Toggle theme on click
+      themeToggle.addEventListener("click", () => {
+        html.classList.toggle("light-mode");
+        const isLight = html.classList.contains("light-mode");
+        themeToggle.textContent = isLight ? "☀️" : "🌙";
+        localStorage.setItem("theme", isLight ? "light" : "dark");
       });
     </script>
   </body>
