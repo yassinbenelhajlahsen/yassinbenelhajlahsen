@@ -1,0 +1,173 @@
+/* ── Custom Properties ── */
+:root {
+  --bg: #0d1117;
+  --bg-elev: #111827;
+  --card: #0b1220;
+  --text: #c9d1d9;
+  --muted: #8b949e;
+  --border: #1f2937;
+  --accent: #58a6ff;
+  --grad-a: #06b6d4;
+  --grad-b: #8b5cf6;
+  --grad-c: #ec4899;
+  --ring: rgba(88, 166, 255, 0.4);
+  --success: #22c55e;
+  --warn: #f59e0b;
+  --danger: #ef4444;
+  --shadow:
+    0 10px 30px rgba(0, 0, 0, 0.35), 0 1px 0 rgba(255, 255, 255, 0.02) inset;
+  --radius: 16px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f8fafc;
+    --bg-elev: #ffffff;
+    --card: #ffffff;
+    --text: #0b1320;
+    --muted: #475569;
+    --border: #e2e8f0;
+    --accent: #2563eb;
+    --ring: rgba(37, 99, 235, 0.35);
+  }
+}
+
+/* Light mode overrides (applied when .light-mode is on <html>) */
+.light-mode {
+  --bg: #f8fafc;
+  --bg-elev: #ffffff;
+  --card: #ffffff;
+  --text: #0b1320;
+  --muted: #475569;
+  --border: #e2e8f0;
+  --accent: #2563eb;
+  --ring: rgba(37, 99, 235, 0.35);
+}
+
+/* ── Reset & Globals ── */
+html {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background:
+    radial-gradient(
+      1200px 600px at 20% -10%,
+      rgba(139, 92, 246, 0.15),
+      transparent 50%
+    ),
+    radial-gradient(
+      1000px 500px at 120% 10%,
+      rgba(6, 182, 212, 0.12),
+      transparent 50%
+    ),
+    var(--bg);
+  color: var(--text);
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Inter,
+    "Helvetica Neue",
+    Arial,
+    "Apple Color Emoji",
+    "Segoe UI Emoji";
+  line-height: 1.6;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.container {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+/* ── Skip Link ── */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+/* ── Typography helpers ── */
+.meta {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: -4px;
+}
+
+/* ── Sections ── */
+section {
+  padding: 48px 0;
+}
+.section-title {
+  font-size: 20px;
+  letter-spacing: 0.3px;
+  margin: 0 0 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.hr {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  border: none;
+  margin: 18px 0 12px;
+}
+
+/* ── Print Styles ── */
+@media print {
+  header,
+  .quicklinks,
+  .cta-row,
+  .hr,
+  .actions,
+  .action,
+  .chip,
+  .btn,
+  .skip-link,
+  body {
+    background: #ffffff;
+    color: #000;
+  }
+  .card {
+    border: 1px solid #bbb;
+    box-shadow: none;
+  }
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+  .container {
+    width: 100%;
+  }
+}

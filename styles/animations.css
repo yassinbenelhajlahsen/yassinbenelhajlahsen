@@ -1,0 +1,78 @@
+/* ── Gradient Shift ── */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-text {
+  animation: gradientShift 8s ease infinite;
+}
+
+/* ── Float (hero buttons) ── */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.btn.hero {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ── Hover Effects ── */
+nav a:hover {
+  background: color-mix(in oklab, var(--bg-elev) 75%, transparent);
+  transform: scale(1.1);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in oklab, var(--accent) 50%, var(--border));
+}
+
+.chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: color-mix(in oklab, var(--bg-elev) 75%, var(--accent) 10%);
+  box-shadow: 0 0 12px var(--ring);
+}
+
+.pill:hover {
+  transform: scale(1.1);
+  border-color: var(--accent);
+  color: var(--accent);
+  background: color-mix(in oklab, var(--bg-elev) 75%, var(--accent) 10%);
+  box-shadow: 0 0 12px var(--ring);
+}
+
+.action:hover {
+  transform: scale(1.1);
+  border-color: var(--accent);
+  color: var(--accent);
+  background: color-mix(in oklab, var(--bg-elev) 75%, var(--accent) 10%);
+  box-shadow: 0 0 12px var(--ring);
+}
+
+/* ── Reveal on Scroll ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.reveal.show {
+  opacity: 1;
+  transform: none;
+}
