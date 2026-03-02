@@ -54,10 +54,37 @@
   --ring: rgba(0, 113, 227, 0.2);
 }
 
+.dark-mode {
+  --bg: #000000;
+  --bg-elev: #1c1c1e;
+  --card: #1c1c1e;
+  --card-hover: #2c2c2e;
+  --text: #f5f5f7;
+  --text-secondary: #a1a1a6;
+  --muted: #86868b;
+  --border: rgba(255, 255, 255, 0.08);
+  --accent: #0071e3;
+  --accent-hover: #0077ed;
+  --accent-green: #30d158;
+  --shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+  --shadow-hover: 0 8px 40px rgba(0, 0, 0, 0.5);
+  --ring: rgba(0, 113, 227, 0.35);
+}
+
 /* ── Reset & Globals ── */
 html {
   scroll-behavior: smooth;
   background: var(--bg);
+  color-scheme: dark;
+  transition: background 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+html.light-mode {
+  color-scheme: light;
+}
+
+html.dark-mode {
+  color-scheme: dark;
 }
 
 * {

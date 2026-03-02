@@ -15,8 +15,8 @@
       content="Full-Stack Engineer | CS '26 | Projects, Experience, Tech, Education, Contact"
     />
     <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="color-scheme" content="dark light" />
     <link rel="icon" type="image/png" href="favicon.png" />
 
     <!-- Plus Jakarta Sans -->
@@ -636,26 +636,36 @@
       const iconMoon = document.getElementById("icon-moon");
       const iconSun = document.getElementById("icon-sun");
       const html = document.documentElement;
-
-      const themeColorMeta = document.querySelector('meta[name="theme-color"][media*="dark"]');
+      const body = document.body;
+      const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+      const colorSchemeMeta = document.querySelector('meta[name="color-scheme"]');
 
       function setTheme(isLight) {
+        const themeName = isLight ? "light" : "dark";
+        const themeColor = isLight ? "#ffffff" : "#000000";
+
+        html.classList.toggle("light-mode", isLight);
+        html.classList.toggle("dark-mode", !isLight);
+        html.style.colorScheme = themeName;
+        html.style.backgroundColor = themeColor;
+        body.style.backgroundColor = themeColor;
+
         if (isLight) {
-          html.classList.add("light-mode");
           iconMoon.style.display = "none";
           iconSun.style.display = "";
-          if (themeColorMeta) themeColorMeta.content = "#ffffff";
         } else {
-          html.classList.remove("light-mode");
           iconMoon.style.display = "";
           iconSun.style.display = "none";
-          if (themeColorMeta) themeColorMeta.content = "#000000";
         }
+
+        if (themeColorMeta) themeColorMeta.setAttribute("content", themeColor);
+        if (colorSchemeMeta) colorSchemeMeta.setAttribute("content", `${themeName} ${isLight ? "dark" : "light"}`);
       }
 
       // Load saved theme from localStorage
       const savedTheme = localStorage.getItem("theme");
-      setTheme(savedTheme === "light");
+      const systemPrefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+      setTheme(savedTheme ? savedTheme === "light" : systemPrefersLight);
 
       // Toggle theme on click
       themeToggle.addEventListener("click", () => {
