@@ -360,13 +360,14 @@
                 deployed across Vercel and 5 Railway services.
               </li>
               <li>
-                Built tiered Redis caching across 8 endpoints with TTLs from
-                30s to 30 days, cutting average response time by ~60%, with
+                Built tiered Redis caching across 8 endpoints with TTLs from 30s
+                to 30 days, cutting average response time by ~60%, with
                 OpenAI-generated game summaries cached at ~$0.0001 per summary.
               </li>
               <li>
-                Tested REST APIs with Jest, covering routes, database
-                operations, and data transformations end-to-end.
+                Wrote Jest and Vitest test suites covering 475+ test cases
+                across API routes, SSE lifecycle, Redis cache, data ingestion
+                pipeline, and frontend hooks.
               </li>
             </ul>
             <div class="actions">
@@ -384,6 +385,71 @@
                 rel="noopener noreferrer"
                 >Source</a
               >
+              <button
+                class="action demo-toggle"
+                aria-expanded="false"
+                aria-controls="scorva-demos"
+              >
+                Demos
+                <svg
+                  class="demo-chevron"
+                  viewBox="0 0 24 24"
+                  width="13"
+                  height="13"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+            </div>
+            <div class="demo-panel" id="scorva-demos" hidden>
+              <div class="demo-grid">
+                <figure class="demo-item">
+                  <img
+                    src="demos/scorva/Homepage.gif"
+                    alt="Scorva homepage walkthrough"
+                    loading="lazy"
+                  />
+                  <figcaption>Homepage</figcaption>
+                </figure>
+                <figure class="demo-item">
+                  <img
+                    src="demos/scorva/LiveGames.gif"
+                    alt="Live games feature"
+                    loading="lazy"
+                  />
+                  <figcaption>Live Games</figcaption>
+                </figure>
+                <figure class="demo-item">
+                  <img
+                    src="demos/scorva/Auth-AiSummary-Boxscore.gif"
+                    alt="Auth, AI summary and boxscore"
+                    loading="lazy"
+                  />
+                  <figcaption>Auth &amp; AI Summary</figcaption>
+                </figure>
+                <figure class="demo-item">
+                  <img
+                    src="demos/scorva/PlayerPage.gif"
+                    alt="Player stats page"
+                    loading="lazy"
+                  />
+                  <figcaption>Player Page</figcaption>
+                </figure>
+                <figure class="demo-item">
+                  <img
+                    src="demos/scorva/Favorites.gif"
+                    alt="Favorites feature"
+                    loading="lazy"
+                  />
+                  <figcaption>Favorites</figcaption>
+                </figure>
+              </div>
             </div>
             <p class="meta" style="margin-top: 14px">
               React &middot; Node.js &middot; Express &middot; TailwindCSS
@@ -432,6 +498,79 @@
                 rel="noopener noreferrer"
                 >Source</a
               >
+              <button
+                class="action demo-toggle"
+                aria-expanded="false"
+                aria-controls="sirat-demos"
+              >
+                Demos
+                <svg
+                  class="demo-chevron"
+                  viewBox="0 0 24 24"
+                  width="13"
+                  height="13"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+            </div>
+            <div class="demo-panel" id="sirat-demos" hidden>
+              <div class="demo-grid">
+                <figure class="demo-item">
+                  <img
+                    src="demos/sirat/home.gif"
+                    alt="Sirat home screen"
+                    loading="lazy"
+                  />
+                  <figcaption>Home</figcaption>
+                </figure>
+                <figure class="demo-item">
+                  <img
+                    src="demos/sirat/calendar.gif"
+                    alt="Prayer calendar"
+                    loading="lazy"
+                  />
+                  <figcaption>Calendar</figcaption>
+                </figure>
+                <figure class="demo-item">
+                  <img
+                    src="demos/sirat/quran.gif"
+                    alt="Quran audio feature"
+                    loading="lazy"
+                  />
+                  <figcaption>Quran</figcaption>
+                </figure>
+                <figure class="demo-item">
+                  <img
+                    src="demos/sirat/qibla.gif"
+                    alt="Qibla compass"
+                    loading="lazy"
+                  />
+                  <figcaption>Qibla</figcaption>
+                </figure>
+                <figure class="demo-item">
+                  <img
+                    src="demos/sirat/mosques.gif"
+                    alt="Mosque discovery"
+                    loading="lazy"
+                  />
+                  <figcaption>Mosques</figcaption>
+                </figure>
+                <figure class="demo-item">
+                  <img
+                    src="demos/sirat/settings.gif"
+                    alt="Settings screen"
+                    loading="lazy"
+                  />
+                  <figcaption>Settings</figcaption>
+                </figure>
+              </div>
             </div>
             <p class="meta" style="margin-top: 14px">
               React Native &middot; Expo &middot; Node.js &middot; Express
@@ -771,6 +910,22 @@
       // Protect links with noopener when target blank
       document.querySelectorAll('a[target="_blank"]').forEach((a) => {
         if (!a.rel.includes("noopener")) a.rel += " noopener";
+      });
+
+      // Demo toggle
+      document.querySelectorAll(".demo-toggle").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const expanded = btn.getAttribute("aria-expanded") === "true";
+          btn.setAttribute("aria-expanded", String(!expanded));
+          const panel = document.getElementById(
+            btn.getAttribute("aria-controls"),
+          );
+          if (expanded) {
+            panel.hidden = true;
+          } else {
+            panel.hidden = false;
+          }
+        });
       });
 
       // Theme toggle functionality
