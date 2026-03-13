@@ -468,6 +468,20 @@
               Everything you need to stay connected to your faith, fast, free,
               and in one place.
             </p>
+            <div class="metrics-row">
+              <div class="metric">
+                <span class="metric-value">11</span>
+                <span class="metric-label">API endpoints</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">4</span>
+                <span class="metric-label">external integrations</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">380+</span>
+                <span class="metric-label">tests passing</span>
+              </div>
+            </div>
             <ul>
               <li>
                 Built features including prayer times, Qibla compass, Quran
@@ -580,9 +594,82 @@
 
           <article
             class="card reveal reveal-3"
-            aria-labelledby="proj-stat-title"
+            aria-labelledby="proj-recvr-title"
           >
-            <h3 id="proj-stat-title">Custom Photo Gallery</h3>
+            <div class="live-badge">Live</div>
+            <h3 id="proj-recvr-title">Recvr</h3>
+            <p class="meta">
+              A recovery-first fitness tracker that monitors muscle fatigue in
+              real time and uses AI to recommend what to train next.
+            </p>
+            <div class="metrics-row">
+              <div class="metric">
+                <span class="metric-value">~60%</span>
+                <span class="metric-label">faster cached responses</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">96-hour</span>
+                <span class="metric-label">rolling fatigue window</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">237</span>
+                <span class="metric-label">Vitest + Playwright tests</span>
+              </div>
+            </div>
+            <ul>
+              <li>
+                Built a real-time recovery engine computing per-muscle fatigue
+                from a 96-hour rolling window — volume-adjusted decay curves,
+                cumulative fatigue stacking, and HSL-interpolated SVG body maps.
+                Cached in Redis (5-min TTL), cutting ~80% of redundant DB
+                reads.
+              </li>
+              <li>
+                Designed a cache-aside architecture across 6 Redis namespaces
+                with 3 TTL tiers (5 min → 1 hr → 24 hr), reducing API response
+                times ~60% on cached paths. Graceful degradation — 100%
+                availability when Redis is unavailable.
+              </li>
+              <li>
+                Streamed AI suggestions via NDJSON with chunk-boundary-safe
+                parsing, integrated Groq Whisper for voice logging, and enforced
+                Redis-backed cooldowns and rate limiting (10 req/hr), cutting
+                redundant AI calls ~90%.
+              </li>
+              <li>
+                Dual-path auth — sub-ms JWT extraction for reads, full server
+                validation for mutations — reducing read-path overhead ~95%
+                while keeping writes secure.
+              </li>
+            </ul>
+            <div class="actions">
+              <a
+                class="action"
+                href="https://recvr.fit"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Live site</a
+              >
+              <a
+                class="action"
+                href="https://github.com/yassinbenelhajlahsen/recvr"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Source</a
+              >
+            </div>
+            <p class="meta" style="margin-top: 14px">
+              Next.js &middot; TypeScript &middot; Tailwind CSS &middot;
+              Supabase &middot; PostgreSQL &middot; Prisma &middot; Redis
+              &middot; OpenAI &middot; Vitest &middot; Playwright
+            </p>
+          </article>
+
+          <article
+            class="card reveal reveal-3"
+            aria-labelledby="proj-gallery-title"
+          >
+            <h3 id="proj-gallery-title">Custom Photo Gallery</h3>
             <p class="meta">
               A private photo and video gallery built as a gift. Owner-only
               access enforced by Firebase Security Rules, not just frontend
@@ -613,48 +700,6 @@
             </div>
             <p class="meta" style="margin-top: 14px">
               React &middot; TypeScript &middot; Firebase &middot; Tailwind CSS
-            </p>
-          </article>
-
-          <article
-            class="card reveal reveal-4"
-            aria-labelledby="proj-interva-title"
-          >
-            <h3 id="proj-interva-title">Interva</h3>
-            <p class="meta">
-              Built this during my own job search. Track applications, log
-              interview rounds, and generate tailored questions per round using
-              OpenAI.
-            </p>
-            <ul>
-              <li>
-                Designed a nested data model (User → Application → Round →
-                Question) backed by PostgreSQL and Prisma, with a NestJS REST
-                API secured by Firebase ID token verification on every route.
-              </li>
-              <li>
-                Built a per-round AI endpoint that sends the job description and
-                round type to OpenAI and returns 5 tailored interview questions,
-                persisted to the database for later review.
-              </li>
-              <li>
-                Supported Google and email/password auth via Firebase, with the
-                backend validating ID tokens server-side rather than trusting
-                the frontend.
-              </li>
-            </ul>
-            <div class="actions">
-              <a
-                class="action"
-                href="https://github.com/yassinbenelhajlahsen/interva"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Source</a
-              >
-            </div>
-            <p class="meta" style="margin-top: 14px">
-              React &middot; NestJS &middot; PostgreSQL &middot; Prisma &middot;
-              Firebase &middot; Tailwind CSS &middot; OpenAI
             </p>
           </article>
         </div>
