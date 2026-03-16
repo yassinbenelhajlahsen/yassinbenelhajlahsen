@@ -238,8 +238,8 @@
             </li>
           </ul>
           <p class="meta" style="margin-top: 16px">
-            React &middot; Typescript &middot; TailwindCSS &middot; FastAPI &middot; Python &middot; Stripe &middot; OpenAI &middot;
-            Firebase
+            React &middot; Typescript &middot; TailwindCSS &middot; FastAPI
+            &middot; Python &middot; Stripe &middot; OpenAI &middot; Firebase
           </p>
           <p class="meta" style="margin-top: 8px; opacity: 0.6">
             Private repo &middot; Built at Soaper
@@ -332,6 +332,7 @@
           <article
             class="card reveal reveal-1"
             aria-labelledby="proj-scorva-title"
+            style="grid-column: 1 / -1"
           >
             <div class="live-badge">Live</div>
             <h3 id="proj-scorva-title">Scorva</h3>
@@ -341,11 +342,15 @@
             </p>
             <div class="metrics-row">
               <div class="metric">
+                <span class="metric-value">22</span>
+                <span class="metric-label">REST + SSE endpoints</span>
+              </div>
+              <div class="metric">
                 <span class="metric-value">293k+</span>
                 <span class="metric-label">stat rows</span>
               </div>
               <div class="metric">
-                <span class="metric-value">~60%</span>
+                <span class="metric-value">~75%</span>
                 <span class="metric-label">faster cache responses</span>
               </div>
               <div class="metric">
@@ -367,7 +372,7 @@
               </li>
               <li>
                 Designed tiered Redis caching (30s–30d TTLs) across 8 endpoints,
-                reducing average response time by ~60%; implemented auth with
+                reducing average response time by ~75% (up to 95%); implemented auth with
                 Google OAuth popup flow, JWT middleware, Supabase signup
                 webhook, and two-step cascading account deletion.
               </li>
@@ -454,9 +459,9 @@
               </div>
             </div>
             <p class="meta" style="margin-top: 14px">
-              React &middot; Node.js &middot; Javascript &middot; Express &middot; TailwindCSS
-              &middot; PostgreSQL &middot; Redis &middot; Prisma  &middot; Supabase &middot; OpenAI
-              &middot; Jest
+              React &middot; Node.js &middot; Javascript &middot; Express
+              &middot; TailwindCSS &middot; PostgreSQL &middot; Redis &middot;
+              Prisma &middot; Supabase &middot; OpenAI &middot; Jest
             </p>
           </article>
 
@@ -472,7 +477,7 @@
             </p>
             <div class="metrics-row">
               <div class="metric">
-                <span class="metric-value">~60%</span>
+                <span class="metric-value">~64%</span>
                 <span class="metric-label">faster cached responses</span>
               </div>
               <div class="metric">
@@ -494,7 +499,7 @@
               <li>
                 Designed a cache-aside architecture across 6 Redis namespaces
                 with 3 TTL tiers (5 min → 1 hr → 24 hr), reducing API response
-                times ~60% on cached paths. Graceful degradation — 100%
+                times ~64% on cached paths. Graceful degradation — 100%
                 availability when Redis is unavailable.
               </li>
               <li>
@@ -608,11 +613,11 @@
             </p>
             <div class="metrics-row">
               <div class="metric">
-                <span class="metric-value">11</span>
+                <span class="metric-value">12</span>
                 <span class="metric-label">API endpoints</span>
               </div>
               <div class="metric">
-                <span class="metric-value">4</span>
+                <span class="metric-value">6</span>
                 <span class="metric-label">external integrations</span>
               </div>
               <div class="metric">
@@ -622,17 +627,26 @@
             </div>
             <ul>
               <li>
-                Built features including prayer times, Qibla compass, Quran
-                audio, mosque discovery, and AI-powered dua search.
+                Architected and shipped a full-stack Islamic companion iOS app
+                (React Native/Expo 54, Express/TypeScript) as a solo developer —
+                34K+ lines of TypeScript across 170+ files, published to the App
+                Store with automated OTA deployments via GitHub Actions and EAS
+                CLI
               </li>
               <li>
-                Organized a monorepo with a React Native frontend and Node.js
-                backend, deploying the API on Railway with secure environment
-                management.
+                Engineered a multi-tier API caching proxy layer handling 3
+                external API integrations (Aladhan, Google Maps, OpenAI) with
+                TTL-based in-memory caching (5min–24hr), in-flight request
+                deduplication, coordinate bucketing, stale-on-error fallback,
+                and retry with exponential backoff — reducing upstream API calls
+                by an estimated 80%+
               </li>
               <li>
-                Added offline support using AsyncStorage to cache prayer data,
-                user preferences, and Quran progress.
+                Shipped 7 user-facing screens with 60fps Reanimated animations,
+                FlashList virtualization, 123+ accessibility annotations across
+                25 files, dark/light/system theming with flash-free hydration,
+                and a marketing landing page at sirat.dev with automated GitHub
+                Pages deployment
               </li>
             </ul>
             <div class="actions">
@@ -725,46 +739,9 @@
               </div>
             </div>
             <p class="meta" style="margin-top: 14px">
-              React Native &middot; Expo &middot; &middot; Typescript &middot; Node.js &middot; Express
-              &middot; Google Places API &middot; OpenAI &middot; Jest
-            </p>
-          </article>
-
-          <article
-            class="card reveal reveal-3"
-            aria-labelledby="proj-gallery-title"
-          >
-            <h3 id="proj-gallery-title">Custom Photo Gallery</h3>
-            <p class="meta">
-              A private photo and video gallery built as a gift. Owner-only
-              access enforced by Firebase Security Rules, not just frontend
-              guards.
-            </p>
-            <ul>
-              <li>
-                Cached thumbnails in IndexedDB on first load for instant gallery
-                restore on return visits, no network round-trip needed.
-              </li>
-              <li>
-                Handled client-side image conversion and thumbnail generation on
-                upload, keeping outputs normalized without any backend jobs.
-              </li>
-              <li>
-                Built a timeline route backed by Firestore events, each opening
-                a mixed media modal with both photos and videos from that date.
-              </li>
-            </ul>
-            <div class="actions">
-              <a
-                class="action"
-                href="https://github.com/yassinbenelhajlahsen/gallery"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Source</a
-              >
-            </div>
-            <p class="meta" style="margin-top: 14px">
-              React &middot; TypeScript &middot; Firebase &middot; Tailwind CSS
+              React Native &middot; Expo &middot; &middot; Typescript &middot;
+              Node.js &middot; Express &middot; Google Places API &middot;
+              OpenAI &middot; Jest
             </p>
           </article>
         </div>
@@ -804,7 +781,6 @@
                 <span class="pill" data-tech="nextjs">Next.js</span>
                 <span class="pill" data-tech="expo">Expo</span>
                 <span class="pill" data-tech="tailwindcss">Tailwind CSS</span>
-
               </div>
             </div>
 
@@ -854,7 +830,6 @@
                 <span class="pill" data-tech="railway">Railway</span>
                 <span class="pill" data-tech="stripe">Stripe</span>
                 <span class="pill" data-tech="openai">OpenAI</span>
-
               </div>
             </div>
           </div>
