@@ -459,6 +459,142 @@
           </article>
 
           <article
+            class="card reveal reveal-3"
+            aria-labelledby="proj-recvr-title"
+          >
+            <div class="live-badge">Live</div>
+            <h3 id="proj-recvr-title">Recvr</h3>
+            <p class="meta">
+              A recovery-first fitness tracker that monitors muscle fatigue in
+              real time and uses AI to recommend what to train next.
+            </p>
+            <div class="metrics-row">
+              <div class="metric">
+                <span class="metric-value">~60%</span>
+                <span class="metric-label">faster cached responses</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">96-hour</span>
+                <span class="metric-label">rolling fatigue window</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">237</span>
+                <span class="metric-label">Vitest + Playwright tests</span>
+              </div>
+            </div>
+            <ul>
+              <li>
+                Built a real-time recovery engine computing per-muscle fatigue
+                from a 96-hour rolling window — volume-adjusted decay curves,
+                cumulative fatigue stacking, and HSL-interpolated SVG body maps.
+                Cached in Redis (5-min TTL), cutting ~80% of redundant DB reads.
+              </li>
+              <li>
+                Designed a cache-aside architecture across 6 Redis namespaces
+                with 3 TTL tiers (5 min → 1 hr → 24 hr), reducing API response
+                times ~60% on cached paths. Graceful degradation — 100%
+                availability when Redis is unavailable.
+              </li>
+              <li>
+                Streamed AI suggestions via NDJSON with chunk-boundary-safe
+                parsing, integrated Groq Whisper for voice logging, and enforced
+                Redis-backed cooldowns and rate limiting (10 req/hr), cutting
+                redundant AI calls ~90%.
+              </li>
+              <li>
+                Dual-path auth — sub-ms JWT extraction for reads, full server
+                validation for mutations — reducing read-path overhead ~95%
+                while keeping writes secure.
+              </li>
+            </ul>
+            <div class="actions">
+              <a
+                class="action"
+                href="https://recvr.fit"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Live site</a
+              >
+              <a
+                class="action"
+                href="https://github.com/yassinbenelhajlahsen/recvr"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Source</a
+              >
+              <button
+                class="action demo-toggle"
+                aria-expanded="false"
+                aria-controls="recvr-demos"
+              >
+                Demos
+                <svg
+                  class="demo-chevron"
+                  viewBox="0 0 24 24"
+                  width="13"
+                  height="13"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+            </div>
+            <div class="demo-panel" id="recvr-demos" hidden>
+              <div class="demo-grid">
+                <figure class="demo-item">
+                  <img
+                    src="demos/recvr/onboarding.gif"
+                    alt="Recvr onboarding walkthrough"
+                    loading="lazy"
+                  />
+                  <figcaption>Onboarding</figcaption>
+                </figure>
+                <figure class="demo-item">
+                  <img
+                    src="demos/recvr/log_workout.gif"
+                    alt="Log workout feature"
+                    loading="lazy"
+                  />
+                  <figcaption>Log Workout</figcaption>
+                </figure>
+                <figure class="demo-item">
+                  <img
+                    src="demos/recvr/recovery_engine.gif"
+                    alt="Recovery engine feature"
+                    loading="lazy"
+                  />
+                  <figcaption>Recovery Engine</figcaption>
+                </figure>
+                <figure class="demo-item">
+                  <img
+                    src="demos/recvr/suggestion.gif"
+                    alt="AI suggestion feature"
+                    loading="lazy"
+                  />
+                  <figcaption>Suggestion</figcaption>
+                </figure>
+                <figure class="demo-item">
+                  <img
+                    src="demos/recvr/progress.gif"
+                    alt="Progress tracking feature"
+                    loading="lazy"
+                  />
+                  <figcaption>Progress</figcaption>
+                </figure>
+              </div>
+            </div>
+            <p class="meta" style="margin-top: 14px">
+              Next.js &middot; TypeScript &middot; Tailwind CSS &middot;
+              Supabase &middot; PostgreSQL &middot; Prisma &middot; Redis
+              &middot; OpenAI &middot; Vitest &middot; Playwright
+            </p>
+          </article>
+          <article
             class="card reveal reveal-2"
             aria-labelledby="proj-sirat-title"
           >
