@@ -238,7 +238,7 @@
             </li>
           </ul>
           <p class="meta" style="margin-top: 16px">
-            React &middot; FastAPI &middot; TailwindCSS &middot; Stripe &middot;
+            React &middot; Typescript &middot; TailwindCSS &middot; FastAPI &middot; Python &middot; Stripe &middot; OpenAI &middot;
             Firebase
           </p>
           <p class="meta" style="margin-top: 8px; opacity: 0.6">
@@ -355,19 +355,21 @@
             </div>
             <ul>
               <li>
-                Designed a multi-league PostgreSQL schema storing 293k+ stat
-                rows across 8.6k games, served via a React + Express app
-                deployed across Vercel and 5 Railway services.
+                Designed a normalized PostgreSQL schema serving 293K+ stat rows
+                across multiple sports leagues via a React + Express stack
+                deployed on Vercel and Railway.
               </li>
               <li>
-                Built tiered Redis caching across 8 endpoints with TTLs from 30s
-                to 30 days, cutting average response time by ~60%, with
-                OpenAI-generated game summaries cached at ~$0.0001 per summary.
+                Architected a two-tier live sync system: a 15-second fast path
+                for scoreboards and a 2-minute path for full box scores, with
+                Server-Sent Events for real-time push and automatic REST
+                fallback on connection failure.
               </li>
               <li>
-                Wrote Jest and Vitest test suites covering 475+ test cases
-                across API routes, SSE lifecycle, Redis cache, data ingestion
-                pipeline, and frontend hooks.
+                Designed tiered Redis caching (30s–30d TTLs) across 8 endpoints,
+                reducing average response time by ~60%; implemented auth with
+                Google OAuth popup flow, JWT middleware, Supabase signup
+                webhook, and two-step cascading account deletion.
               </li>
             </ul>
             <div class="actions">
@@ -452,8 +454,8 @@
               </div>
             </div>
             <p class="meta" style="margin-top: 14px">
-              React &middot; Node.js &middot; Express &middot; TailwindCSS
-              &middot; PostgreSQL &middot; Redis &middot; Prisma &middot; OpenAI
+              React &middot; Node.js &middot; Javascript &middot; Express &middot; TailwindCSS
+              &middot; PostgreSQL &middot; Redis &middot; Prisma  &middot; Supabase &middot; OpenAI
               &middot; Jest
             </p>
           </article>
@@ -723,81 +725,8 @@
               </div>
             </div>
             <p class="meta" style="margin-top: 14px">
-              React Native &middot; Expo &middot; Node.js &middot; Express
+              React Native &middot; Expo &middot; &middot; Typescript &middot; Node.js &middot; Express
               &middot; Google Places API &middot; OpenAI &middot; Jest
-            </p>
-          </article>
-
-          <article
-            class="card reveal reveal-3"
-            aria-labelledby="proj-recvr-title"
-          >
-            <div class="live-badge">Live</div>
-            <h3 id="proj-recvr-title">Recvr</h3>
-            <p class="meta">
-              A recovery-first fitness tracker that monitors muscle fatigue in
-              real time and uses AI to recommend what to train next.
-            </p>
-            <div class="metrics-row">
-              <div class="metric">
-                <span class="metric-value">~60%</span>
-                <span class="metric-label">faster cached responses</span>
-              </div>
-              <div class="metric">
-                <span class="metric-value">96-hour</span>
-                <span class="metric-label">rolling fatigue window</span>
-              </div>
-              <div class="metric">
-                <span class="metric-value">237</span>
-                <span class="metric-label">Vitest + Playwright tests</span>
-              </div>
-            </div>
-            <ul>
-              <li>
-                Built a real-time recovery engine computing per-muscle fatigue
-                from a 96-hour rolling window — volume-adjusted decay curves,
-                cumulative fatigue stacking, and HSL-interpolated SVG body maps.
-                Cached in Redis (5-min TTL), cutting ~80% of redundant DB
-                reads.
-              </li>
-              <li>
-                Designed a cache-aside architecture across 6 Redis namespaces
-                with 3 TTL tiers (5 min → 1 hr → 24 hr), reducing API response
-                times ~60% on cached paths. Graceful degradation — 100%
-                availability when Redis is unavailable.
-              </li>
-              <li>
-                Streamed AI suggestions via NDJSON with chunk-boundary-safe
-                parsing, integrated Groq Whisper for voice logging, and enforced
-                Redis-backed cooldowns and rate limiting (10 req/hr), cutting
-                redundant AI calls ~90%.
-              </li>
-              <li>
-                Dual-path auth — sub-ms JWT extraction for reads, full server
-                validation for mutations — reducing read-path overhead ~95%
-                while keeping writes secure.
-              </li>
-            </ul>
-            <div class="actions">
-              <a
-                class="action"
-                href="https://recvr.fit"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Live site</a
-              >
-              <a
-                class="action"
-                href="https://github.com/yassinbenelhajlahsen/recvr"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Source</a
-              >
-            </div>
-            <p class="meta" style="margin-top: 14px">
-              Next.js &middot; TypeScript &middot; Tailwind CSS &middot;
-              Supabase &middot; PostgreSQL &middot; Prisma &middot; Redis
-              &middot; OpenAI &middot; Vitest &middot; Playwright
             </p>
           </article>
 
@@ -872,8 +801,10 @@
               <span class="category-title">Frontend</span>
               <div class="pills-group">
                 <span class="pill" data-tech="react">React</span>
-                <span class="pill" data-tech="nestjsjs">Nest.js</span>
+                <span class="pill" data-tech="nextjs">Next.js</span>
                 <span class="pill" data-tech="expo">Expo</span>
+                <span class="pill" data-tech="tailwindcss">Tailwind CSS</span>
+
               </div>
             </div>
 
@@ -882,10 +813,21 @@
               <div class="pills-group">
                 <span class="pill" data-tech="nodejs">Node.js</span>
                 <span class="pill" data-tech="expressjs">Express.js</span>
+                <span class="pill" data-tech="nextjs">Next.js</span>
                 <span class="pill" data-tech="nestjs">NestJS</span>
                 <span class="pill" data-tech="fastapi">FastAPI</span>
                 <span class="pill" data-tech="sqlalchemy">SQLAlchemy</span>
                 <span class="pill" data-tech="prisma">Prisma</span>
+              </div>
+            </div>
+
+            <div class="tech-category">
+              <span class="category-title">Testing</span>
+              <div class="pills-group">
+                <span class="pill" data-tech="vitest">Vitest</span>
+                <span class="pill" data-tech="pytest">Pytest</span>
+                <span class="pill" data-tech="jest">Jest</span>
+                <span class="pill" data-tech="playwright">PlayWright</span>
               </div>
             </div>
 
@@ -895,16 +837,24 @@
                 <span class="pill" data-tech="postgresql">PostgreSQL</span>
                 <span class="pill" data-tech="redis">Redis</span>
                 <span class="pill" data-tech="mariadb">MariaDB</span>
+                <span class="pill" data-tech="firestore">Cloud Firestore</span>
               </div>
             </div>
 
             <div class="tech-category">
-              <span class="category-title">Tools & Cloud</span>
+              <span class="category-title">Tools, Cloud & Platforms</span>
               <div class="pills-group">
                 <span class="pill" data-tech="git">Git</span>
                 <span class="pill" data-tech="github">GitHub</span>
                 <span class="pill" data-tech="aws">AWS</span>
                 <span class="pill" data-tech="cicd">CI/CD Pipelines</span>
+                <span class="pill" data-tech="supabase">Supabase</span>
+                <span class="pill" data-tech="firebase">Firebase</span>
+                <span class="pill" data-tech="vercel">Vercel</span>
+                <span class="pill" data-tech="railway">Railway</span>
+                <span class="pill" data-tech="stripe">Stripe</span>
+                <span class="pill" data-tech="openai">OpenAI</span>
+
               </div>
             </div>
           </div>
