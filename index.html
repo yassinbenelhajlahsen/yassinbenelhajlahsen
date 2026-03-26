@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Yassin Benelhajlahsen</title>
+    <title>Yassin's Portfolio</title>
     <meta
       name="description"
       content="Yassin Benelhajlahsen | Full-Stack Engineer, CS '26. Projects, experience, tech stack, education, and contact."
@@ -17,7 +17,6 @@
     <meta property="og:type" content="website" />
     <meta name="theme-color" content="#000000" />
     <meta name="color-scheme" content="dark light" />
-    <link rel="icon" type="image/png" href="favicon.png" />
 
     <!-- Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -266,35 +265,38 @@
                 <span class="metric-label">rows indexed</span>
               </div>
               <div class="metric">
-                <span class="metric-value">15+</span>
-                <span class="metric-label">features shipped</span>
+                <span class="metric-value">20+</span>
+                <span class="metric-label">NCPDP SCRIPT scenarios</span>
               </div>
               <div class="metric">
-                <span class="metric-value">12+</span>
-                <span class="metric-label">reusable components</span>
+                <span class="metric-value">15+</span>
+                <span class="metric-label">features shipped</span>
               </div>
             </div>
 
             <ul>
               <li>
-                Shipped full-stack features across a React/TypeScript frontend
-                and FastAPI backend, reducing p95 API response times to under
-                20ms and cutting frontend latency by 25%.
+                Shipped full-stack features across a React/TypeScript and
+                FastAPI stack; optimized API layer to reduce p95 response times
+                from 140ms to under 20ms and cut frontend latency by 25%.
+              </li>
+              <li>
+                Led end-to-end Surescripts e-prescribing certification across
+                20+ NCPDP SCRIPT test scenarios; identified and resolved
+                critical bugs in prescription routing, renewal response
+                handling, and async message processing to achieve full
+                certification for a live EMR.
               </li>
               <li>
                 Designed and implemented a multi-parameter radiology search
-                using indexed PostgreSQL queries over 120k+ rows, accelerating
-                data entry workflows by 40%.
+                feature using indexed PostgreSQL queries over 120K+ rows,
+                accelerating data entry workflows by 40%.
               </li>
               <li>
-                Built a reusable component library of 12+ TypeScript/React
-                components, reducing estimated development time for new features
-                by 30%.
-              </li>
-              <li>
-                Collaborated with physicians and cross-functional teams in an
-                Agile environment to ship 15+ production features on a live EMR
-                used in real patient-facing environments.
+                Built and maintained backend services — EC2 deployments via
+                systemd, Celery task queues for async prescription workflows —
+                shipping 15+ production features alongside physicians and
+                clinical staff.
               </li>
             </ul>
           </div>
@@ -305,19 +307,14 @@
             <div class="when">May 2025 – Aug 2025</div>
             <ul>
               <li>
-                Deployed and configured servers, IP-based systems, and desktop
-                images across NYC schools, conducting 10+ technical walkthroughs
-                per school to validate setup and ensure readiness.
+                Deployed and validated server and network infrastructure across
+                10+ NYC public schools; developed standardized walkthrough
+                checklists that reduced post-deployment support tickets by 25%.
               </li>
               <li>
-                Wrote automation scripts for rollouts, diagnostics, and on-site
-                audits across five boroughs, reducing manual steps and improving
-                deployment consistency.
-              </li>
-              <li>
-                Authored technical documentation and worked with vendors to
-                maintain district-wide infrastructure stability and IT
-                compliance.
+                Built Python automation scripts for server rollouts and on-site
+                diagnostics across 5 boroughs, cutting per-school setup
+                verification from 90min to 25min.
               </li>
             </ul>
           </div>
@@ -360,9 +357,9 @@
             </div>
             <ul>
               <li>
-                Designed a normalized PostgreSQL schema serving 300K+ stat rows
-                across multiple sports leagues via a React + Express stack
-                deployed on Vercel and Railway.
+                Designed a normalized PostgreSQL schema across 7 related tables
+                serving 300K+ stat rows; built a REST API layer handling
+                multi-sport queries with under 30ms average response times.
               </li>
               <li>
                 Architected a two-tier live sync system: a 15-second fast path
@@ -372,9 +369,9 @@
               </li>
               <li>
                 Designed tiered Redis caching (30s–30d TTLs) across 8 endpoints,
-                reducing average response time by ~75% (up to 95%); implemented auth with
-                Google OAuth popup flow, JWT middleware, Supabase signup
-                webhook, and two-step cascading account deletion.
+                reducing average response time by ~75% (up to 95%); implemented
+                auth with Google OAuth popup flow, JWT middleware, Supabase
+                signup webhook, and two-step cascading account deletion.
               </li>
             </ul>
             <div class="actions">
@@ -778,9 +775,11 @@
               <span class="category-title">Frontend</span>
               <div class="pills-group">
                 <span class="pill" data-tech="react">React</span>
+                <span class="pill" data-tech="reactnative">React Native</span>
                 <span class="pill" data-tech="nextjs">Next.js</span>
                 <span class="pill" data-tech="expo">Expo</span>
                 <span class="pill" data-tech="tailwindcss">Tailwind CSS</span>
+                <span class="pill" data-tech="zustand">Zustand</span>
               </div>
             </div>
 
@@ -792,6 +791,7 @@
                 <span class="pill" data-tech="nextjs">Next.js</span>
                 <span class="pill" data-tech="nestjs">NestJS</span>
                 <span class="pill" data-tech="fastapi">FastAPI</span>
+                <span class="pill" data-tech="celery">Celery</span>
                 <span class="pill" data-tech="sqlalchemy">SQLAlchemy</span>
                 <span class="pill" data-tech="prisma">Prisma</span>
               </div>
@@ -822,7 +822,8 @@
               <div class="pills-group">
                 <span class="pill" data-tech="git">Git</span>
                 <span class="pill" data-tech="github">GitHub</span>
-                <span class="pill" data-tech="aws">AWS</span>
+                <span class="pill" data-tech="docker">Docker</span>
+                <span class="pill" data-tech="aws">AWS (EC3, S3)</span>
                 <span class="pill" data-tech="cicd">CI/CD Pipelines</span>
                 <span class="pill" data-tech="supabase">Supabase</span>
                 <span class="pill" data-tech="firebase">Firebase</span>
