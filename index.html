@@ -351,21 +351,31 @@
                 <span class="metric-label">faster cache responses</span>
               </div>
               <div class="metric">
-                <span class="metric-value">475+</span>
+                <span class="metric-value">660+</span>
                 <span class="metric-label">tests via Jest + Vitest</span>
+              </div>
+              <div class="metric">
+                <span class="metric-value">12</span>
+                <span class="metric-label">AI RAG tools</span>
               </div>
             </div>
             <ul>
               <li>
-                Designed a normalized PostgreSQL schema across 7 related tables
+                Designed a normalized PostgreSQL schema across 9 related tables
                 serving 300K+ stat rows; built a REST API layer handling
                 multi-sport queries with under 30ms average response times.
               </li>
               <li>
-                Architected a two-tier live sync system: a 15-second fast path
-                for scoreboards and a 2-minute path for full box scores, with
-                Server-Sent Events for real-time push and automatic REST
-                fallback on connection failure.
+                Built an agentic AI chat assistant using GPT-4.1-mini with a
+                multi-turn tool-calling loop across 12 RAG tools for live stats,
+                player comparisons, and web search; streams responses via SSE
+                with automatic page-context injection.
+              </li>
+              <li>
+                Architected a two-tier live sync system: a 15-second
+                polling cycle for scoreboards and a 2-minute cycle for full box
+                scores, pushed to the browser via PostgreSQL LISTEN/NOTIFY over
+                SSE with automatic REST fallback on connection failure.
               </li>
               <li>
                 Designed tiered Redis caching (30s–30d TTLs) across 8 endpoints,
