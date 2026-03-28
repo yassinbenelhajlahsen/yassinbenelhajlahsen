@@ -351,7 +351,7 @@
                 <span class="metric-label">faster cache responses</span>
               </div>
               <div class="metric">
-                <span class="metric-value">660+</span>
+                <span class="metric-value">720+</span>
                 <span class="metric-label">tests via Jest + Vitest</span>
               </div>
               <div class="metric">
@@ -367,15 +367,18 @@
               </li>
               <li>
                 Built an agentic AI chat assistant using GPT-4.1-mini with a
-                multi-turn tool-calling loop across 13 RAG tools for live stats,
+                multi-turn tool-calling loop across 13 tools; uses pgvector
+                semantic search (RAG) over text-embedding-3-small embeddings of
+                game summaries for natural-language game retrieval, live stats,
                 player comparisons, and web search; streams responses via SSE
-                with automatic page-context injection.
+                with automatic page-context injection and rolling conversation
+                summarization.
               </li>
               <li>
-                Architected a two-tier live sync system: a 15-second
-                polling cycle for scoreboards and a 2-minute cycle for full box
-                scores, pushed to the browser via PostgreSQL LISTEN/NOTIFY over
-                SSE with automatic REST fallback on connection failure.
+                Architected a two-tier live sync system: a 15-second polling
+                cycle for scoreboards and a 2-minute cycle for full box scores,
+                pushed to the browser via PostgreSQL LISTEN/NOTIFY over SSE with
+                automatic REST fallback on connection failure.
               </li>
               <li>
                 Designed tiered Redis caching (30s–30d TTLs) across 8 endpoints,
