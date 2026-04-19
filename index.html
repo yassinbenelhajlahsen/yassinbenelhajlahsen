@@ -339,11 +339,11 @@
             </p>
             <div class="metrics-row">
               <div class="metric">
-                <span class="metric-value">24</span>
+                <span class="metric-value">31</span>
                 <span class="metric-label">REST + SSE endpoints</span>
               </div>
               <div class="metric">
-                <span class="metric-value">3.8M+</span>
+                <span class="metric-value">4M+</span>
                 <span class="metric-label">total rows</span>
               </div>
               <div class="metric">
@@ -351,23 +351,23 @@
                 <span class="metric-label">faster cache responses</span>
               </div>
               <div class="metric">
-                <span class="metric-value">1350+</span>
+                <span class="metric-value">1800+</span>
                 <span class="metric-label">tests via Jest + Vitest</span>
               </div>
               <div class="metric">
-                <span class="metric-value">13</span>
-                <span class="metric-label">AI RAG tools</span>
+                <span class="metric-value">17</span>
+                <span class="metric-label">AI tools</span>
               </div>
             </div>
             <ul>
               <li>
                 Designed a normalized PostgreSQL schema across 13 related tables
-                serving 3.8M+ rows; built a REST API layer handling
+                serving 4M+ rows; built a REST API layer handling
                 multi-sport queries with under 30ms average response times.
               </li>
               <li>
                 Built an agentic AI chat assistant using GPT-4.1-mini with a
-                multi-turn tool-calling loop across 13 tools; uses pgvector
+                multi-turn tool-calling loop across 17 tools; uses pgvector
                 semantic search (RAG) over text-embedding-3-small embeddings of
                 game summaries for natural-language game retrieval, live stats,
                 player comparisons, and web search; streams responses via SSE
@@ -381,7 +381,7 @@
                 automatic REST fallback on connection failure.
               </li>
               <li>
-                Designed tiered Redis caching (30s–30d TTLs) across 8 endpoints,
+                Designed tiered Redis caching (30s–30d TTLs) across 17 endpoints,
                 reducing average response time by ~75% (up to 95%); implemented
                 auth with Google OAuth popup flow, JWT middleware, Supabase
                 signup webhook, and two-step cascading account deletion.
